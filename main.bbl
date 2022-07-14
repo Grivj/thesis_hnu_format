@@ -1,10 +1,207 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{he2016deep}
+\bibitem{carlini_audio_2018}
+Carlini N, Wagner D.
+\newblock Audio {Adversarial} {Examples}: {Targeted} {Attacks} on
+  {Speech}-to-{Text}.
+\newblock arXiv:1801.01944 [cs], 2018.
+
+\bibitem{su_one_2019}
+Su J, Vargas D~V, Kouichi S.
+\newblock One pixel attack for fooling deep neural networks.
+\newblock IEEE Transactions on Evolutionary Computation, 2019, 23(5):828--841
+
+\bibitem{krizhevsky_imagenet_2017-1}
+Krizhevsky A, Sutskever I, Hinton G~E.
+\newblock {ImageNet} classification with deep convolutional neural networks.
+\newblock Communications of the ACM, 2017, 60(6):84--90
+
+\bibitem{zeiler_visualizing_2013}
+Zeiler M~D, Fergus R.
+\newblock Visualizing and {Understanding} {Convolutional} {Networks}.
+\newblock arXiv:1311.2901 [cs], 2013.
+\newblock ArXiv: 1311.2901
+
+\bibitem{russakovsky_imagenet_2015}
+Russakovsky O, Deng J, Su H, et~al.
+\newblock {ImageNet} {Large} {Scale} {Visual} {Recognition} {Challenge}.
+\newblock arXiv:1409.0575 [cs], 2015.
+
+\bibitem{amodei_deep_2015}
+Amodei D, Anubhai R, Battenberg E, et~al.
+\newblock Deep {Speech} 2: {End}-to-{End} {Speech} {Recognition} in {English}
+  and {Mandarin}.
+\newblock arXiv:1512.02595 [cs], 2015.
+
+\bibitem{bojarski_end_2016}
+Bojarski M, Del~Testa D, Dworakowski D, et~al.
+\newblock End to {End} {Learning} for {Self}-{Driving} {Cars}.
+\newblock arXiv:1604.07316 [cs], 2016.
+
+\bibitem{silver_mastering_2016}
+Silver D, Huang A, Maddison C~J, et~al.
+\newblock Mastering the {Game} of {Go} with {Deep} {Neural} {Networks} and
+  {Tree} {Search}.
+\newblock Nature, 2016, 529(7587):484--489
+
+\bibitem{szegedy_intriguing_2014}
+Szegedy C, Zaremba W, Sutskever I, et~al.
+\newblock Intriguing properties of neural networks.
+\newblock arXiv:1312.6199 [cs], 2014.
+
+\bibitem{he_deep_2015}
 He K, Zhang X, Ren S, et~al.
-\newblock Deep residual learning for image recognition.
-\newblock In: Proc of Proceedings of the IEEE conference on computer vision and
-  pattern recognition.
-\newblock 2016,  770--778
+\newblock Deep {Residual} {Learning} for {Image} {Recognition}.
+\newblock arXiv:1512.03385 [cs], 2015.
+
+\bibitem{vaswani_attention_2017}
+Vaswani A, Shazeer N, Parmar N, et~al.
+\newblock Attention {Is} {All} {You} {Need}.
+\newblock arXiv:1706.03762 [cs], 2017.
+
+\bibitem{huang_densely_2018}
+Huang G, Liu Z, van~derMaaten L, et~al.
+\newblock Densely {Connected} {Convolutional} {Networks}.
+\newblock arXiv:1608.06993 [cs], 2018.
+
+\bibitem{srivastava_dropout_2014}
+Srivastava N, Hinton G, Krizhevsky A, et~al.
+\newblock Dropout: {A} {Simple} {Way} to {Prevent} {Neural} {Networks} from
+  {Overfitting}.
+\newblock Journal of Machine Learning Research, 2014, 15(56):1929--1958
+
+\bibitem{hendrycks_benchmarking_2019}
+Hendrycks D, Dietterich T~G.
+\newblock Benchmarking {Neural} {Network} {Robustness} to {Common}
+  {Corruptions} and {Surface} {Variations}.
+\newblock arXiv:1807.01697 [cs, stat], 2019.
+
+\bibitem{warren_s_mcculloch_walter_pitts_logical_1943}
+Warren S.~McCullochWalter~Pitts W~P.
+\newblock A logical calculus of the ideas immanent in nervous activity.
+\newblock https://doi.org/10.1007/BF02478259, 1943.~19
+
+\bibitem{brain_perceptron_1958}
+Brain I~T, Rosenblatt F.
+\newblock The {Perceptron}: {A} {Probabilistic} {Model} for {Information}
+  {Storage} and {Organization}.
+\newblock https://doi.org/10.1037/h0042519, 1958
+
+\bibitem{minsky_perceptrons_1969}
+Minsky M, Papert S~A.
+\newblock Perceptrons: {An} {Introduction} to {Computational} {Geometry}.
+\newblock 1969.
+
+\bibitem{rumelhart_learning_1986}
+Rumelhart D~E, Hinton G~E, Williams R~J.
+\newblock Learning representations by back-propagating errors.
+\newblock Nature, 1986, 323(6088):533--536.
+\newblock Number: 6088 Publisher: Nature Publishing Group
+
+\bibitem{lecun_object_1999}
+LeCun Y, Haffner P, Bottou L, et~al.
+\newblock Object {Recognition} with {Gradient}-{Based} {Learning}.
+\newblock In: Forsyth D~A, Mundy J~L, diGesú V, et~al, (eds.). Proc of Shape,
+  {Contour} and {Grouping} in {Computer} {Vision}, Lecture {Notes} in
+  {Computer} {Science}. Berlin, Heidelberg: Springer, 1999: 319--345
+
+\bibitem{noauthor_model_2020}
+Model {Hacking} {ADAS} to {Pave} {Safer} {Roads} for {Autonomous} {Vehicles},
+  2020-February.
+\newblock
+  {\url{https://www.mcafee.com/blogs/other-blogs/mcafee-labs/model-hacking-adas-to-pave-safer-roads-for-autonomous-vehicles/}}
+
+\bibitem{goodfellow_explaining_2015}
+Goodfellow I~J, Shlens J, Szegedy C.
+\newblock Explaining and {Harnessing} {Adversarial} {Examples}.
+\newblock arXiv:1412.6572 [cs, stat], 2015.
+
+\bibitem{szegedy_going_2014}
+Szegedy C, Liu W, Jia Y, et~al.
+\newblock Going {Deeper} with {Convolutions}.
+\newblock arXiv:1409.4842 [cs], 2014.
+
+\bibitem{kurakin_adversarial_2017}
+Kurakin A, Goodfellow I, Bengio S.
+\newblock Adversarial examples in the physical world.
+\newblock arXiv:1607.02533 [cs, stat], 2017.
+
+\bibitem{carlini_towards_2017}
+Carlini N, Wagner D.
+\newblock Towards {Evaluating} the {Robustness} of {Neural} {Networks}.
+\newblock arXiv:1608.04644 [cs], 2017.
+
+\bibitem{papernot_distillation_2016}
+Papernot N, McDaniel P, Wu X, et~al.
+\newblock Distillation as a {Defense} to {Adversarial} {Perturbations}
+  {Against} {Deep} {Neural} {Networks}.
+\newblock In: Proc of 2016 {IEEE} {Symposium} on {Security} and {Privacy}
+  ({SP}).
+\newblock 2016,  582--597
+
+\bibitem{rony_decoupling_2019}
+Rony J, Hafemann L~G, Oliveira L~S, et~al.
+\newblock Decoupling {Direction} and {Norm} for {Efficient} {Gradient}-{Based}
+  {L2} {Adversarial} {Attacks} and {Defenses}.
+\newblock arXiv:1811.09600 [cs], 2019.
+
+\bibitem{papernot_limitations_2015}
+Papernot N, McDaniel P, Jha S, et~al.
+\newblock The {Limitations} of {Deep} {Learning} in {Adversarial} {Settings}.
+\newblock arXiv:1511.07528 [cs, stat], 2015.
+
+\bibitem{carlini_adversarial_2017}
+Carlini N, Wagner D.
+\newblock Adversarial {Examples} {Are} {Not} {Easily} {Detected}: {Bypassing}
+  {Ten} {Detection} {Methods}.
+\newblock arXiv:1705.07263 [cs], 2017.
+
+\bibitem{feinman_detecting_2017}
+Feinman R, Curtin R~R, Shintre S, et~al.
+\newblock Detecting {Adversarial} {Samples} from {Artifacts}.
+\newblock arXiv:1703.00410 [cs, stat], 2017.
+
+\bibitem{krizhevsky_learning_2009}
+Krizhevsky A.
+\newblock Learning {Multiple} {Layers} of {Features} from {Tiny} {Images}.
+\newblock 2009.
+
+\bibitem{elson_asirra_2007}
+Elson J, Douceur J~J, Howell J, et~al.
+\newblock Asirra: {A} {CAPTCHA} that {Exploits} {Interest}-{Aligned} {Manual}
+  {Image} {Categorization}.
+\newblock 2007.
+
+\bibitem{simonyan_very_2015-2}
+Simonyan K.
+\newblock Very {Deep} {Convolutional} {Networks} for {Large}-{Scale} {Image}
+  {Recognition}.
+\newblock 2015.
+
+\bibitem{rauber_foolbox_2020}
+Rauber J, Zimmermann R, Bethge M, et~al.
+\newblock Foolbox {Native}: {Fast} adversarial attacks to benchmark the
+  robustness of machine learning models in {PyTorch}, {TensorFlow}, and {JAX}.
+\newblock Journal of Open Source Software, 2020, 5(53):2607
+
+\bibitem{buitinck_api_2013}
+Buitinck L, Louppe G, Blondel M, et~al.
+\newblock {API} design for machine learning software: experiences from the
+  scikit-learn project.
+\newblock arXiv:1309.0238 [cs], 2013.
+\newblock ArXiv: 1309.0238
+
+\bibitem{xu_feature_2018}
+Xu W, Evans D, Qi Y.
+\newblock Feature {Squeezing}: {Detecting} {Adversarial} {Examples} in {Deep}
+  {Neural} {Networks}.
+\newblock Proceedings 2018 Network and Distributed System Security Symposium,
+  2018.
+
+\bibitem{zheng_improving_2016}
+Zheng S, Song Y, Leung T, et~al.
+\newblock Improving the {Robustness} of {Deep} {Neural} {Networks} via
+  {Stability} {Training}.
+\newblock 2016. 4480--4488
 
 \end{thebibliography}

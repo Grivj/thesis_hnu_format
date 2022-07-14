@@ -1,7 +1,630 @@
-@inproceedings{he2016deep,
-  title     = {Deep residual learning for image recognition},
-  author    = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
-  booktitle = {Proceedings of the IEEE conference on computer vision and pattern recognition},
-  pages     = {770--778},
-  year      = {2016}
+
+@article{krizhevsky_learning_2009,
+  title  = {Learning {Multiple} {Layers} of {Features} from {Tiny} {Images}},
+  author = {Krizhevsky, Alex},
+  month  = apr,
+  year   = {2009}
+}
+
+@article{simonyan_very_2015,
+  title    = {Very {Deep} {Convolutional} {Networks} for {Large}-{Scale} {Image} {Recognition}},
+  url      = {http://arxiv.org/abs/1409.1556},
+  abstract = {In this work we investigate the effect of the convolutional network depth on its accuracy in the large-scale image recognition setting. Our main contribution is a thorough evaluation of networks of increasing depth using an architecture with very small (3x3) convolution filters, which shows that a significant improvement on the prior-art configurations can be achieved by pushing the depth to 16-19 weight layers. These findings were the basis of our ImageNet Challenge 2014 submission, where our team secured the first and the second places in the localisation and classification tracks respectively. We also show that our representations generalise well to other datasets, where they achieve state-of-the-art results. We have made our two best-performing ConvNet models publicly available to facilitate further research on the use of deep visual representations in computer vision.},
+  journal  = {arXiv:1409.1556 [cs]},
+  author   = {Simonyan, Karen and Zisserman, Andrew},
+  month    = apr,
+  year     = {2015},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition},
+  annote   = {arXiv: 1409.1556}
+}
+
+@article{carlini_towards_2017,
+  title    = {Towards {Evaluating} the {Robustness} of {Neural} {Networks}},
+  url      = {http://arxiv.org/abs/1608.04644},
+  abstract = {Neural networks provide state-of-the-art results for most machine learning tasks. Unfortunately, neural networks are vulnerable to adversarial examples: given an input \$x\$ and any target classification \$t\$, it is possible to find a new input \$x'\$ that is similar to \$x\$ but classified as \$t\$. This makes it difficult to apply neural networks in security-critical areas. Defensive distillation is a recently proposed approach that can take an arbitrary neural network, and increase its robustness, reducing the success rate of current attacks' ability to find adversarial examples from \$95{\textbackslash}textbackslash\%\$ to \$0.5{\textbackslash}textbackslash\%\$. In this paper, we demonstrate that defensive distillation does not significantly increase the robustness of neural networks by introducing three new attack algorithms that are successful on both distilled and undistilled neural networks with \$100{\textbackslash}textbackslash\%\$ probability. Our attacks are tailored to three distance metrics used previously in the literature, and when compared to previous adversarial example generation algorithms, our attacks are often much more effective (and never worse). Furthermore, we propose using high-confidence adversarial examples in a simple transferability test we show can also be used to break defensive distillation. We hope our attacks will be used as a benchmark in future defense attempts to create neural networks that resist adversarial examples.},
+  journal  = {arXiv:1608.04644 [cs]},
+  author   = {Carlini, Nicholas and Wagner, David},
+  month    = mar,
+  year     = {2017},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Cryptography and Security},
+  annote   = {arXiv: 1608.04644}
+}
+
+@article{kurakin_adversarial_2017,
+  title    = {Adversarial examples in the physical world},
+  url      = {http://arxiv.org/abs/1607.02533},
+  abstract = {Most existing machine learning classifiers are highly vulnerable to adversarial examples. An adversarial example is a sample of input data which has been modified very slightly in a way that is intended to cause a machine learning classifier to misclassify it. In many cases, these modifications can be so subtle that a human observer does not even notice the modification at all, yet the classifier still makes a mistake. Adversarial examples pose security concerns because they could be used to perform an attack on machine learning systems, even if the adversary has no access to the underlying model. Up to now, all previous work have assumed a threat model in which the adversary can feed data directly into the machine learning classifier. This is not always the case for systems operating in the physical world, for example those which are using signals from cameras and other sensors as an input. This paper shows that even in such physical world scenarios, machine learning systems are vulnerable to adversarial examples. We demonstrate this by feeding adversarial images obtained from cell-phone camera to an ImageNet Inception classifier and measuring the classification accuracy of the system. We find that a large fraction of adversarial examples are classified incorrectly even when perceived through the camera.},
+  journal  = {arXiv:1607.02533 [cs, stat]},
+  author   = {Kurakin, Alexey and Goodfellow, Ian and Bengio, Samy},
+  month    = feb,
+  year     = {2017},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Cryptography and Security, Computer Science - Machine Learning, Statistics - Machine Learning},
+  annote   = {arXiv: 1607.02533}
+}
+
+@article{goodfellow_explaining_2015,
+  title    = {Explaining and {Harnessing} {Adversarial} {Examples}},
+  url      = {http://arxiv.org/abs/1412.6572},
+  abstract = {Several machine learning models, including neural networks, consistently misclassify adversarial examples—inputs formed by applying small but intentionally worst-case perturbations to examples from the dataset, such that the perturbed input results in the model outputting an incorrect answer with high confidence. Early attempts at explaining this phenomenon focused on nonlinearity and overfitting. We argue instead that the primary cause of neural networks' vulnerability to adversarial perturbation is their linear nature. This explanation is supported by new quantitative results while giving the first explanation of the most intriguing fact about them: their generalization across architectures and training sets. Moreover, this view yields a simple and fast method of generating adversarial examples. Using this approach to provide examples for adversarial training, we reduce the test set error of a maxout network on the MNIST dataset.},
+  journal  = {arXiv:1412.6572 [cs, stat]},
+  author   = {Goodfellow, Ian J. and Shlens, Jonathon and Szegedy, Christian},
+  month    = mar,
+  year     = {2015},
+  keywords = {Computer Science - Machine Learning, Statistics - Machine Learning},
+  annote   = {arXiv: 1412.6572}
+}
+
+@article{fawzi_robustness_2016,
+  title      = {Robustness of classifiers: from adversarial to random noise},
+  shorttitle = {Robustness of classifiers},
+  url        = {http://arxiv.org/abs/1608.08967},
+  abstract   = {Several recent works have shown that state-of-the-art classifiers are vulnerable to worst-case (i.e., adversarial) perturbations of the datapoints. On the other hand, it has been empirically observed that these same classifiers are relatively robust to random noise. In this paper, we propose to study a {\textbackslash}textbackslashtextit\{semi-random\} noise regime that generalizes both the random and worst-case noise regimes. We propose the first quantitative analysis of the robustness of nonlinear classifiers in this general noise regime. We establish precise theoretical bounds on the robustness of classifiers in this general regime, which depend on the curvature of the classifier's decision boundary. Our bounds confirm and quantify the empirical observations that classifiers satisfying curvature constraints are robust to random noise. Moreover, we quantify the robustness of classifiers in terms of the subspace dimension in the semi-random noise regime, and show that our bounds remarkably interpolate between the worst-case and random noise regimes. We perform experiments and show that the derived bounds provide very accurate estimates when applied to various state-of-the-art deep neural networks and datasets. This result suggests bounds on the curvature of the classifiers' decision boundaries that we support experimentally, and more generally offers important insights onto the geometry of high dimensional classification problems.},
+  journal    = {arXiv:1608.08967 [cs, stat]},
+  author     = {Fawzi, Alhussein and Moosavi-Dezfooli, Seyed-Mohsen and Frossard, Pascal},
+  month      = aug,
+  year       = {2016},
+  keywords   = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Machine Learning, Statistics - Machine Learning},
+  annote     = {arXiv: 1608.08967}
+}
+
+@article{carlini_adversarial_2017,
+  title      = {Adversarial {Examples} {Are} {Not} {Easily} {Detected}: {Bypassing} {Ten} {Detection} {Methods}},
+  shorttitle = {Adversarial {Examples} {Are} {Not} {Easily} {Detected}},
+  url        = {http://arxiv.org/abs/1705.07263},
+  abstract   = {Neural networks are known to be vulnerable to adversarial examples: inputs that are close to natural inputs but classified incorrectly. In order to better understand the space of adversarial examples, we survey ten recent proposals that are designed for detection and compare their efficacy. We show that all can be defeated by constructing new loss functions. We conclude that adversarial examples are significantly harder to detect than previously appreciated, and the properties believed to be intrinsic to adversarial examples are in fact not. Finally, we propose several simple guidelines for evaluating future proposed defenses.},
+  journal    = {arXiv:1705.07263 [cs]},
+  author     = {Carlini, Nicholas and Wagner, David},
+  month      = nov,
+  year       = {2017},
+  keywords   = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Cryptography and Security, Computer Science - Machine Learning},
+  annote     = {arXiv: 1705.07263}
+}
+
+@article{amodei_deep_2015,
+  title      = {Deep {Speech} 2: {End}-to-{End} {Speech} {Recognition} in {English} and {Mandarin}},
+  shorttitle = {Deep {Speech} 2},
+  url        = {http://arxiv.org/abs/1512.02595},
+  abstract   = {We show that an end-to-end deep learning approach can be used to recognize either English or Mandarin Chinese speech–two vastly different languages. Because it replaces entire pipelines of hand-engineered components with neural networks, end-to-end learning allows us to handle a diverse variety of speech including noisy environments, accents and different languages. Key to our approach is our application of HPC techniques, resulting in a 7x speedup over our previous system. Because of this efficiency, experiments that previously took weeks now run in days. This enables us to iterate more quickly to identify superior architectures and algorithms. As a result, in several cases, our system is competitive with the transcription of human workers when benchmarked on standard datasets. Finally, using a technique called Batch Dispatch with GPUs in the data center, we show that our system can be inexpensively deployed in an online setting, delivering low latency when serving users at scale.},
+  journal    = {arXiv:1512.02595 [cs]},
+  author     = {Amodei, Dario and Anubhai, Rishita and Battenberg, Eric and Case, Carl and Casper, Jared and Catanzaro, Bryan and Chen, Jingdong and Chrzanowski, Mike and Coates, Adam and Diamos, Greg and Elsen, Erich and Engel, Jesse and Fan, Linxi and Fougner, Christopher and Han, Tony and Hannun, Awni and Jun, Billy and LeGresley, Patrick and Lin, Libby and Narang, Sharan and Ng, Andrew and Ozair, Sherjil and Prenger, Ryan and Raiman, Jonathan and Satheesh, Sanjeev and Seetapun, David and Sengupta, Shubho and Wang, Yi and Wang, Zhiqian and Wang, Chong and Xiao, Bo and Yogatama, Dani and Zhan, Jun and Zhu, Zhenyao},
+  month      = dec,
+  year       = {2015},
+  keywords   = {Computer Science - Computation and Language},
+  annote     = {arXiv: 1512.02595}
+}
+
+@article{russakovsky_imagenet_2015,
+  title    = {{ImageNet} {Large} {Scale} {Visual} {Recognition} {Challenge}},
+  url      = {http://arxiv.org/abs/1409.0575},
+  abstract = {The ImageNet Large Scale Visual Recognition Challenge is a benchmark in object category classification and detection on hundreds of object categories and millions of images. The challenge has been run annually from 2010 to present, attracting participation from more than fifty institutions. This paper describes the creation of this benchmark dataset and the advances in object recognition that have been possible as a result. We discuss the challenges of collecting large-scale ground truth annotation, highlight key breakthroughs in categorical object recognition, provide a detailed analysis of the current state of the field of large-scale image classification and object detection, and compare the state-of-the-art computer vision accuracy with human accuracy. We conclude with lessons learned in the five years of the challenge, and propose future directions and improvements.},
+  journal  = {arXiv:1409.0575 [cs]},
+  author   = {Russakovsky, Olga and Deng, Jia and Su, Hao and Krause, Jonathan and Satheesh, Sanjeev and Ma, Sean and Huang, Zhiheng and Karpathy, Andrej and Khosla, Aditya and Bernstein, Michael and Berg, Alexander C. and Fei-Fei, Li},
+  month    = jan,
+  year     = {2015},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition, I.4.8, I.5.2},
+  annote   = {arXiv: 1409.0575}
+}
+
+@article{bojarski_end_2016,
+  title    = {End to {End} {Learning} for {Self}-{Driving} {Cars}},
+  url      = {http://arxiv.org/abs/1604.07316},
+  abstract = {We trained a convolutional neural network (CNN) to map raw pixels from a single front-facing camera directly to steering commands. This end-to-end approach proved surprisingly powerful. With minimum training data from humans the system learns to drive in traffic on local roads with or without lane markings and on highways. It also operates in areas with unclear visual guidance such as in parking lots and on unpaved roads. The system automatically learns internal representations of the necessary processing steps such as detecting useful road features with only the human steering angle as the training signal. We never explicitly trained it to detect, for example, the outline of roads. Compared to explicit decomposition of the problem, such as lane marking detection, path planning, and control, our end-to-end system optimizes all processing steps simultaneously. We argue that this will eventually lead to better performance and smaller systems. Better performance will result because the internal components self-optimize to maximize overall system performance, instead of optimizing human-selected intermediate criteria, e.g., lane detection. Such criteria understandably are selected for ease of human interpretation which doesn't automatically guarantee maximum system performance. Smaller networks are possible because the system learns to solve the problem with the minimal number of processing steps. We used an NVIDIA DevBox and Torch 7 for training and an NVIDIA DRIVE(TM) PX self-driving car computer also running Torch 7 for determining where to drive. The system operates at 30 frames per second (FPS).},
+  journal  = {arXiv:1604.07316 [cs]},
+  author   = {Bojarski, Mariusz and Del Testa, Davide and Dworakowski, Daniel and Firner, Bernhard and Flepp, Beat and Goyal, Prasoon and Jackel, Lawrence D. and Monfort, Mathew and Muller, Urs and Zhang, Jiakai and Zhang, Xin and Zhao, Jake and Zieba, Karol},
+  month    = apr,
+  year     = {2016},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Machine Learning, Computer Science - Neural and Evolutionary Computing},
+  annote   = {arXiv: 1604.07316}
+}
+
+@article{silver_mastering_2016,
+  title    = {Mastering the {Game} of {Go} with {Deep} {Neural} {Networks} and {Tree} {Search}},
+  volume   = {529},
+  doi      = {10.1038/nature16961},
+  number   = {7587},
+  journal  = {Nature},
+  author   = {Silver, David and Huang, Aja and Maddison, Chris J. and Guez, Arthur and Sifre, Laurent and van den Driessche, George and Schrittwieser, Julian and Antonoglou, Ioannis and Panneershelvam, Veda and Lanctot, Marc and Dieleman, Sander and Grewe, Dominik and Nham, John and Kalchbrenner, Nal and Sutskever, Ilya and Lillicrap, Timothy and Leach, Madeleine and Kavukcuoglu, Koray and Graepel, Thore and Hassabis, Demis},
+  month    = jan,
+  year     = {2016},
+  keywords = {baduk go google},
+  pages    = {484--489},
+  annote   = {Publisher: Nature Publishing Group}
+}
+
+@article{szegedy_intriguing_2014,
+  title    = {Intriguing properties of neural networks},
+  url      = {http://arxiv.org/abs/1312.6199},
+  abstract = {Deep neural networks are highly expressive models that have recently achieved state of the art performance on speech and visual recognition tasks. While their expressiveness is the reason they succeed, it also causes them to learn uninterpretable solutions that could have counter-intuitive properties. In this paper we report two such properties. First, we find that there is no distinction between individual high level units and random linear combinations of high level units, according to various methods of unit analysis. It suggests that it is the space, rather than the individual units, that contains of the semantic information in the high layers of neural networks. Second, we find that deep neural networks learn input-output mappings that are fairly discontinuous to a significant extend. We can cause the network to misclassify an image by applying a certain imperceptible perturbation, which is found by maximizing the network's prediction error. In addition, the specific nature of these perturbations is not a random artifact of learning: the same perturbation can cause a different network, that was trained on a different subset of the dataset, to misclassify the same input.},
+  journal  = {arXiv:1312.6199 [cs]},
+  author   = {Szegedy, Christian and Zaremba, Wojciech and Sutskever, Ilya and Bruna, Joan and Erhan, Dumitru and Goodfellow, Ian and Fergus, Rob},
+  month    = feb,
+  year     = {2014},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Machine Learning, Computer Science - Neural and Evolutionary Computing},
+  annote   = {arXiv: 1312.6199}
+}
+
+@article{carlini_audio_2018,
+  title      = {Audio {Adversarial} {Examples}: {Targeted} {Attacks} on {Speech}-to-{Text}},
+  shorttitle = {Audio {Adversarial} {Examples}},
+  url        = {http://arxiv.org/abs/1801.01944},
+  abstract   = {We construct targeted audio adversarial examples on automatic speech recognition. Given any audio waveform, we can produce another that is over 99.9\% similar, but transcribes as any phrase we choose (recognizing up to 50 characters per second of audio). We apply our white-box iterative optimization-based attack to Mozilla's implementation DeepSpeech end-to-end, and show it has a 100\% success rate. The feasibility of this attack introduce a new domain to study adversarial examples.},
+  journal    = {arXiv:1801.01944 [cs]},
+  author     = {Carlini, Nicholas and Wagner, David},
+  month      = mar,
+  year       = {2018},
+  keywords   = {Computer Science - Cryptography and Security, Computer Science - Machine Learning, Computer Science - Artificial Intelligence},
+  annote     = {arXiv: 1801.01944}
+}
+
+@article{papernot_limitations_2015,
+  title    = {The {Limitations} of {Deep} {Learning} in {Adversarial} {Settings}},
+  url      = {http://arxiv.org/abs/1511.07528},
+  abstract = {Deep learning takes advantage of large datasets and computationally efficient training algorithms to outperform other approaches at various machine learning tasks. However, imperfections in the training phase of deep neural networks make them vulnerable to adversarial samples: inputs crafted by adversaries with the intent of causing deep neural networks to misclassify. In this work, we formalize the space of adversaries against deep neural networks (DNNs) and introduce a novel class of algorithms to craft adversarial samples based on a precise understanding of the mapping between inputs and outputs of DNNs. In an application to computer vision, we show that our algorithms can reliably produce samples correctly classified by human subjects but misclassified in specific targets by a DNN with a 97\% adversarial success rate while only modifying on average 4.02\% of the input features per sample. We then evaluate the vulnerability of different sample classes to adversarial perturbations by defining a hardness measure. Finally, we describe preliminary work outlining defenses against adversarial samples by defining a predictive measure of distance between a benign input and a target classification.},
+  journal  = {arXiv:1511.07528 [cs, stat]},
+  author   = {Papernot, Nicolas and McDaniel, Patrick and Jha, Somesh and Fredrikson, Matt and Celik, Z. Berkay and Swami, Ananthram},
+  month    = nov,
+  year     = {2015},
+  keywords = {Computer Science - Cryptography and Security, Computer Science - Machine Learning, Statistics - Machine Learning, Computer Science - Neural and Evolutionary Computing},
+  annote   = {arXiv: 1511.07528}
+}
+
+@article{su_one_2019,
+  title    = {One pixel attack for fooling deep neural networks},
+  volume   = {23},
+  issn     = {1089-778X, 1089-778X, 1941-0026},
+  url      = {http://arxiv.org/abs/1710.08864},
+  doi      = {10.1109/TEVC.2019.2890858},
+  abstract = {Recent research has revealed that the output of Deep Neural Networks (DNN) can be easily altered by adding relatively small perturbations to the input vector. In this paper, we analyze an attack in an extremely limited scenario where only one pixel can be modified. For that we propose a novel method for generating one-pixel adversarial perturbations based on differential evolution (DE). It requires less adversarial information (a black-box attack) and can fool more types of networks due to the inherent features of DE. The results show that 67.97\% of the natural images in Kaggle CIFAR-10 test dataset and 16.04\% of the ImageNet (ILSVRC 2012) test images can be perturbed to at least one target class by modifying just one pixel with 74.03\% and 22.91\% confidence on average. We also show the same vulnerability on the original CIFAR-10 dataset. Thus, the proposed attack explores a different take on adversarial machine learning in an extreme limited scenario, showing that current DNNs are also vulnerable to such low dimension attacks. Besides, we also illustrate an important application of DE (or broadly speaking, evolutionary computation) in the domain of adversarial machine learning: creating tools that can effectively generate low-cost adversarial attacks against neural networks for evaluating robustness.},
+  number   = {5},
+  journal  = {IEEE Transactions on Evolutionary Computation},
+  author   = {Su, Jiawei and Vargas, Danilo Vasconcellos and Kouichi, Sakurai},
+  month    = oct,
+  year     = {2019},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Machine Learning, Statistics - Machine Learning},
+  pages    = {828--841},
+  annote   = {arXiv: 1710.08864}
+}
+
+@article{srivastava_dropout_2014,
+  title   = {Dropout: {A} {Simple} {Way} to {Prevent} {Neural} {Networks} from {Overfitting}},
+  volume  = {15},
+  url     = {http://jmlr.org/papers/v15/srivastava14a.html},
+  number  = {56},
+  journal = {Journal of Machine Learning Research},
+  author  = {Srivastava, Nitish and Hinton, Geoffrey and Krizhevsky, Alex and Sutskever, Ilya and Salakhutdinov, Ruslan},
+  year    = {2014},
+  pages   = {1929--1958}
+}
+
+@article{szegedy_going_2014,
+  title    = {Going {Deeper} with {Convolutions}},
+  url      = {http://arxiv.org/abs/1409.4842},
+  abstract = {We propose a deep convolutional neural network architecture codenamed "Inception", which was responsible for setting the new state of the art for classification and detection in the ImageNet Large-Scale Visual Recognition Challenge 2014 (ILSVRC 2014). The main hallmark of this architecture is the improved utilization of the computing resources inside the network. This was achieved by a carefully crafted design that allows for increasing the depth and width of the network while keeping the computational budget constant. To optimize quality, the architectural decisions were based on the Hebbian principle and the intuition of multi-scale processing. One particular incarnation used in our submission for ILSVRC 2014 is called GoogLeNet, a 22 layers deep network, the quality of which is assessed in the context of classification and detection.},
+  journal  = {arXiv:1409.4842 [cs]},
+  author   = {Szegedy, Christian and Liu, Wei and Jia, Yangqing and Sermanet, Pierre and Reed, Scott and Anguelov, Dragomir and Erhan, Dumitru and Vanhoucke, Vincent and Rabinovich, Andrew},
+  month    = sep,
+  year     = {2014},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition},
+  annote   = {arXiv: 1409.4842}
+}
+
+@inproceedings{papernot_distillation_2016,
+  title     = {Distillation as a {Defense} to {Adversarial} {Perturbations} {Against} {Deep} {Neural} {Networks}},
+  doi       = {10.1109/SP.2016.41},
+  abstract  = {Deep learning algorithms have been shown to perform extremely well on many classical machine learning problems. However, recent studies have shown that deep learning, like other machine learning techniques, is vulnerable to adversarial samples: inputs crafted to force a deep neural network (DNN) to provide adversary-selected outputs. Such attacks can seriously undermine the security of the system supported by the DNN, sometimes with devastating consequences. For example, autonomous vehicles can be crashed, illicit or illegal content can bypass content filters, or biometric authentication systems can be manipulated to allow improper access. In this work, we introduce a defensive mechanism called defensive distillation to reduce the effectiveness of adversarial samples on DNNs. We analytically investigate the generalizability and robustness properties granted by the use of defensive distillation when training DNNs. We also empirically study the effectiveness of our defense mechanisms on two DNNs placed in adversarial settings. The study shows that defensive distillation can reduce effectiveness of sample creation from 95\% to less than 0.5\% on a studied DNN. Such dramatic gains can be explained by the fact that distillation leads gradients used in adversarial sample creation to be reduced by a factor of 1030. We also find that distillation increases the average minimum number of features that need to be modified to create adversarial samples by about 800\% on one of the DNNs we tested.},
+  booktitle = {2016 {IEEE} {Symposium} on {Security} and {Privacy} ({SP})},
+  author    = {Papernot, Nicolas and McDaniel, Patrick and Wu, Xi and Jha, Somesh and Swami, Ananthram},
+  month     = may,
+  year      = {2016},
+  keywords  = {Automobiles, Computational modeling, Computer architecture, Machine learning, Neural networks, Security, Training},
+  pages     = {582--597},
+  annote    = {ISSN: 2375-1207}
+}
+
+@article{rony_decoupling_2019,
+  title    = {Decoupling {Direction} and {Norm} for {Efficient} {Gradient}-{Based} {L2} {Adversarial} {Attacks} and {Defenses}},
+  url      = {http://arxiv.org/abs/1811.09600},
+  abstract = {Research on adversarial examples in computer vision tasks has shown that small, often imperceptible changes to an image can induce misclassification, which has security implications for a wide range of image processing systems. Considering \$L\_2\$ norm distortions, the Carlini and Wagner attack is presently the most effective white-box attack in the literature. However, this method is slow since it performs a line-search for one of the optimization terms, and often requires thousands of iterations. In this paper, an efficient approach is proposed to generate gradient-based attacks that induce misclassifications with low \$L\_2\$ norm, by decoupling the direction and the norm of the adversarial perturbation that is added to the image. Experiments conducted on the MNIST, CIFAR-10 and ImageNet datasets indicate that our attack achieves comparable results to the state-of-the-art (in terms of \$L\_2\$ norm) with considerably fewer iterations (as few as 100 iterations), which opens the possibility of using these attacks for adversarial training. Models trained with our attack achieve state-of-the-art robustness against white-box gradient-based \$L\_2\$ attacks on the MNIST and CIFAR-10 datasets, outperforming the Madry defense when the attacks are limited to a maximum norm.},
+  journal  = {arXiv:1811.09600 [cs]},
+  author   = {Rony, Jérôme and Hafemann, Luiz G. and Oliveira, Luiz S. and Ayed, Ismail Ben and Sabourin, Robert and Granger, Eric},
+  month    = apr,
+  year     = {2019},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Cryptography and Security, Computer Science - Machine Learning},
+  annote   = {arXiv: 1811.09600}
+}
+
+@article{elson_asirra_2007,
+  title      = {Asirra: {A} {CAPTCHA} that {Exploits} {Interest}-{Aligned} {Manual} {Image} {Categorization}},
+  shorttitle = {Asirra},
+  url        = {https://www.microsoft.com/en-us/research/publication/asirra-a-captcha-that-exploits-interest-aligned-manual-image-categorization/},
+  abstract   = {We present Asirra, a CAPTCHA that asks users to identify cats out of a set of 12 photographs of both cats and dogs. Asirra is easy for users; user studies indicate it can be solved by humans 99.6\% of the time in under 30 seconds. Barring a major advance in machine vision, we expect computers […]},
+  language   = {en-US},
+  author     = {Elson, Jeremy and Douceur, John (JD) and Howell, Jon and Saul, Jared},
+  month      = oct,
+  year       = {2007}
+}
+
+@article{howard_imagenette_nodate,
+  title  = {{ImageNette}},
+  url    = {https://github.com/fastai/imagenette/},
+  author = {Howard, Jeremy}
+}
+
+@article{rauber_foolbox_2020,
+  title      = {Foolbox {Native}: {Fast} adversarial attacks to benchmark the robustness of machine learning models in {PyTorch}, {TensorFlow}, and {JAX}},
+  volume     = {5},
+  issn       = {2475-9066},
+  shorttitle = {Foolbox {Native}},
+  url        = {https://joss.theoj.org/papers/10.21105/joss.02607},
+  doi        = {10.21105/joss.02607},
+  abstract   = {Rauber et al., (2020). Foolbox Native: Fast adversarial attacks to benchmark the robustness of machine learning models in PyTorch, TensorFlow, and JAX. Journal of Open Source Software, 5(53), 2607, https://doi.org/10.21105/joss.02607},
+  language   = {en},
+  number     = {53},
+  journal    = {Journal of Open Source Software},
+  author     = {Rauber, Jonas and Zimmermann, Roland and Bethge, Matthias and Brendel, Wieland},
+  month      = sep,
+  year       = {2020},
+  pages      = {2607}
+}
+
+@article{metzen_detecting_2017,
+  title    = {On {Detecting} {Adversarial} {Perturbations}},
+  url      = {http://arxiv.org/abs/1702.04267},
+  abstract = {Machine learning and deep learning in particular has advanced tremendously on perceptual tasks in recent years. However, it remains vulnerable against adversarial perturbations of the input that have been crafted specifically to fool the system while being quasi-imperceptible to a human. In this work, we propose to augment deep neural networks with a small "detector" subnetwork which is trained on the binary classification task of distinguishing genuine data from data containing adversarial perturbations. Our method is orthogonal to prior work on addressing adversarial perturbations, which has mostly focused on making the classification network itself more robust. We show empirically that adversarial perturbations can be detected surprisingly well even though they are quasi-imperceptible to humans. Moreover, while the detectors have been trained to detect only a specific adversary, they generalize to similar and weaker adversaries. In addition, we propose an adversarial attack that fools both the classifier and the detector and a novel training procedure for the detector that counteracts this attack.},
+  journal  = {arXiv:1702.04267 [cs, stat]},
+  author   = {Metzen, Jan Hendrik and Genewein, Tim and Fischer, Volker and Bischoff, Bastian},
+  month    = feb,
+  year     = {2017},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Machine Learning, Statistics - Machine Learning, Computer Science - Artificial Intelligence},
+  annote   = {arXiv: 1702.04267}
+}
+
+@article{bhagoji_dimensionality_2017,
+  title    = {Dimensionality {Reduction} as a {Defense} against {Evasion} {Attacks} on {Machine} {Learning} {Classifiers}},
+  url      = {/paper/Dimensionality-Reduction-as-a-Defense-against-on-Bhagoji-Cullina/10bd926253cbf5829ee92e927127641b69546e65},
+  abstract = {We propose the use of dimensionality reduction as a defense against evasion attacks on ML classifiers. We present and investigate a strategy for incorporating dimensionality reduction via Principal Component Analysis to enhance the resilience of machine learning, targeting both the classification and the training phase. We empirically evaluate and demonstrate the feasibility of dimensionality reduction of data as a defense mechanism against evasion attacks using multiple real-world datasets. Our key findings are that the defenses are (i) effective against strategic evasion attacks in the literature, increasing the resources required by an adversary for a successful attack by a factor of about two, (ii) applicable across a range of ML classifiers, including Support Vector Machines and Deep Neural Networks, and (iii) generalizable to multiple application domains, including image classification, and human activity classification.},
+  language = {en},
+  journal  = {undefined},
+  author   = {Bhagoji, A. and Cullina, Daniel and Mittal, Prateek},
+  year     = {2017}
+}
+
+@article{feinman_detecting_2017,
+  title    = {Detecting {Adversarial} {Samples} from {Artifacts}},
+  url      = {http://arxiv.org/abs/1703.00410},
+  abstract = {Deep neural networks (DNNs) are powerful nonlinear architectures that are known to be robust to random perturbations of the input. However, these models are vulnerable to adversarial perturbations–small input changes crafted explicitly to fool the model. In this paper, we ask whether a DNN can distinguish adversarial samples from their normal and noisy counterparts. We investigate model confidence on adversarial samples by looking at Bayesian uncertainty estimates, available in dropout neural networks, and by performing density estimation in the subspace of deep features learned by the model. The result is a method for implicit adversarial detection that is oblivious to the attack algorithm. We evaluate this method on a variety of standard datasets including MNIST and CIFAR-10 and show that it generalizes well across different architectures and attacks. Our findings report that 85-93\% ROC-AUC can be achieved on a number of standard classification tasks with a negative class that consists of both normal and noisy samples.},
+  journal  = {arXiv:1703.00410 [cs, stat]},
+  author   = {Feinman, Reuben and Curtin, Ryan R. and Shintre, Saurabh and Gardner, Andrew B.},
+  month    = nov,
+  year     = {2017},
+  keywords = {Computer Science - Machine Learning, Statistics - Machine Learning},
+  annote   = {arXiv: 1703.00410}
+}
+
+@article{liang_detecting_2021,
+  title    = {Detecting {Adversarial} {Image} {Examples} in {Deep} {Networks} with {Adaptive} {Noise} {Reduction}},
+  volume   = {18},
+  issn     = {1545-5971, 1941-0018, 2160-9209},
+  url      = {http://arxiv.org/abs/1705.08378},
+  doi      = {10.1109/TDSC.2018.2874243},
+  abstract = {Recently, many studies have demonstrated deep neural network (DNN) classifiers can be fooled by the adversarial example, which is crafted via introducing some perturbations into an original sample. Accordingly, some powerful defense techniques were proposed. However, existing defense techniques often require modifying the target model or depend on the prior knowledge of attacks. In this paper, we propose a straightforward method for detecting adversarial image examples, which can be directly deployed into unmodified off-the-shelf DNN models. We consider the perturbation to images as a kind of noise and introduce two classic image processing techniques, scalar quantization and smoothing spatial filter, to reduce its effect. The image entropy is employed as a metric to implement an adaptive noise reduction for different kinds of images. Consequently, the adversarial example can be effectively detected by comparing the classification results of a given sample and its denoised version, without referring to any prior knowledge of attacks. More than 20,000 adversarial examples against some state-of-the-art DNN models are used to evaluate the proposed method, which are crafted with different attack techniques. The experiments show that our detection method can achieve a high overall F1 score of 96.39\% and certainly raises the bar for defense-aware attacks.},
+  number   = {1},
+  journal  = {IEEE Transactions on Dependable and Secure Computing},
+  author   = {Liang, Bin and Li, Hongcheng and Su, Miaoqiang and Li, Xirong and Shi, Wenchang and Wang, Xiaofeng},
+  month    = jan,
+  year     = {2021},
+  keywords = {Computer Science - Cryptography and Security, Computer Science - Machine Learning},
+  pages    = {72--85},
+  annote   = {arXiv: 1705.08378}
+}
+
+@article{xu_feature_2018,
+  title      = {Feature {Squeezing}: {Detecting} {Adversarial} {Examples} in {Deep} {Neural} {Networks}},
+  shorttitle = {Feature {Squeezing}},
+  url        = {http://arxiv.org/abs/1704.01155},
+  doi        = {10.14722/ndss.2018.23198},
+  abstract   = {Although deep neural networks (DNNs) have achieved great success in many tasks, they can often be fooled by {\textbackslash}textbackslashemph\{adversarial examples\} that are generated by adding small but purposeful distortions to natural examples. Previous studies to defend against adversarial examples mostly focused on refining the DNN models, but have either shown limited success or required expensive computation. We propose a new strategy, {\textbackslash}textbackslashemph\{feature squeezing\}, that can be used to harden DNN models by detecting adversarial examples. Feature squeezing reduces the search space available to an adversary by coalescing samples that correspond to many different feature vectors in the original space into a single sample. By comparing a DNN model's prediction on the original input with that on squeezed inputs, feature squeezing detects adversarial examples with high accuracy and few false positives. This paper explores two feature squeezing methods: reducing the color bit depth of each pixel and spatial smoothing. These simple strategies are inexpensive and complementary to other defenses, and can be combined in a joint detection framework to achieve high detection rates against state-of-the-art attacks.},
+  journal    = {Proceedings 2018 Network and Distributed System Security Symposium},
+  author     = {Xu, Weilin and Evans, David and Qi, Yanjun},
+  year       = {2018},
+  keywords   = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Cryptography and Security, Computer Science - Machine Learning},
+  annote     = {arXiv: 1704.01155}
+}
+
+@article{powers_evaluation_2020,
+  title      = {Evaluation: from precision, recall and {F}-measure to {ROC}, informedness, markedness and correlation},
+  shorttitle = {Evaluation},
+  url        = {http://arxiv.org/abs/2010.16061},
+  abstract   = {Commonly used evaluation measures including Recall, Precision, F-Measure and Rand Accuracy are biased and should not be used without clear understanding of the biases, and corresponding identification of chance or base case levels of the statistic. Using these measures a system that performs worse in the objective sense of Informedness, can appear to perform better under any of these commonly used measures. We discuss several concepts and measures that reflect the probability that prediction is informed versus chance. Informedness and introduce Markedness as a dual measure for the probability that prediction is marked versus chance. Finally we demonstrate elegant connections between the concepts of Informedness, Markedness, Correlation and Significance as well as their intuitive relationships with Recall and Precision, and outline the extension from the dichotomous case to the general multi-class case.},
+  journal    = {arXiv:2010.16061 [cs, stat]},
+  author     = {Powers, David M. W.},
+  month      = oct,
+  year       = {2020},
+  keywords   = {Computer Science - Machine Learning, Statistics - Machine Learning, Statistics - Methodology},
+  annote     = {arXiv: 2010.16061}
+}
+
+@misc{phan_huyvnphanpytorch_cifar10_2021,
+  title     = {huyvnphan/{PyTorch}\_CIFAR10},
+  url       = {https://zenodo.org/record/4431043#.YKfrVXUzbeU},
+  abstract  = {Pretrained TorchVision models on CIFAR-10 dataset},
+  publisher = {Zenodo},
+  author    = {Phan, Huy},
+  month     = jan,
+  year      = {2021},
+  doi       = {10.5281/zenodo.4431043}
+}
+
+@article{paszke_pytorch_nodate,
+  title    = {{PyTorch}: {An} {Imperative} {Style}, {High}-{Performance} {Deep} {Learning} {Library}},
+  abstract = {Deep learning frameworks have often focused on either usability or speed, but not both. PyTorch is a machine learning library that shows that these two goals are in fact compatible: it provides an imperative and Pythonic programming style that supports code as a model, makes debugging easy and is consistent with other popular scientiﬁc computing libraries, while remaining efﬁcient and supporting hardware accelerators such as GPUs.},
+  language = {en},
+  author   = {Paszke, Adam and Gross, Sam and Massa, Francisco and Lerer, Adam and Bradbury, James and Chanan, Gregory and Killeen, Trevor and Lin, Zeming and Gimelshein, Natalia and Antiga, Luca and Desmaison, Alban and Kopf, Andreas and Yang, Edward and DeVito, Zachary and Raison, Martin and Tejani, Alykhan and Chilamkurthy, Sasank and Steiner, Benoit and Fang, Lu and Bai, Junjie and Chintala, Soumith},
+  pages    = {12}
+}
+
+@article{tramer_ensemble_2020,
+  title      = {Ensemble {Adversarial} {Training}: {Attacks} and {Defenses}},
+  shorttitle = {Ensemble {Adversarial} {Training}},
+  url        = {http://arxiv.org/abs/1705.07204},
+  abstract   = {Adversarial examples are perturbed inputs designed to fool machine learning models. Adversarial training injects such examples into training data to increase robustness. To scale this technique to large datasets, perturbations are crafted using fast single-step methods that maximize a linear approximation of the model's loss. We show that this form of adversarial training converges to a degenerate global minimum, wherein small curvature artifacts near the data points obfuscate a linear approximation of the loss. The model thus learns to generate weak perturbations, rather than defend against strong ones. As a result, we find that adversarial training remains vulnerable to black-box attacks, where we transfer perturbations computed on undefended models, as well as to a powerful novel single-step attack that escapes the non-smooth vicinity of the input data via a small random step. We further introduce Ensemble Adversarial Training, a technique that augments training data with perturbations transferred from other models. On ImageNet, Ensemble Adversarial Training yields models with strong robustness to black-box attacks. In particular, our most robust model won the first round of the NIPS 2017 competition on Defenses against Adversarial Attacks. However, subsequent work found that more elaborate black-box attacks could significantly enhance transferability and reduce the accuracy of our models.},
+  journal    = {arXiv:1705.07204 [cs, stat]},
+  author     = {Tramèr, Florian and Kurakin, Alexey and Papernot, Nicolas and Goodfellow, Ian and Boneh, Dan and McDaniel, Patrick},
+  month      = apr,
+  year       = {2020},
+  keywords   = {Computer Science - Cryptography and Security, Computer Science - Machine Learning, Statistics - Machine Learning},
+  annote     = {arXiv: 1705.07204}
+}
+
+@article{he_deep_2015,
+  title    = {Deep {Residual} {Learning} for {Image} {Recognition}},
+  url      = {http://arxiv.org/abs/1512.03385},
+  abstract = {Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. We explicitly reformulate the layers as learning residual functions with reference to the layer inputs, instead of learning unreferenced functions. We provide comprehensive empirical evidence showing that these residual networks are easier to optimize, and can gain accuracy from considerably increased depth. On the ImageNet dataset we evaluate residual nets with a depth of up to 152 layers—8x deeper than VGG nets but still having lower complexity. An ensemble of these residual nets achieves 3.57\% error on the ImageNet test set. This result won the 1st place on the ILSVRC 2015 classification task. We also present analysis on CIFAR-10 with 100 and 1000 layers. The depth of representations is of central importance for many visual recognition tasks. Solely due to our extremely deep representations, we obtain a 28\% relative improvement on the COCO object detection dataset. Deep residual nets are foundations of our submissions to ILSVRC \& COCO 2015 competitions, where we also won the 1st places on the tasks of ImageNet detection, ImageNet localization, COCO detection, and COCO segmentation.},
+  journal  = {arXiv:1512.03385 [cs]},
+  author   = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  month    = dec,
+  year     = {2015},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition},
+  annote   = {arXiv: 1512.03385}
+}
+
+@article{vaswani_attention_2017,
+  title    = {Attention {Is} {All} {You} {Need}},
+  url      = {http://arxiv.org/abs/1706.03762},
+  abstract = {The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.},
+  journal  = {arXiv:1706.03762 [cs]},
+  author   = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N. and Kaiser, Lukasz and Polosukhin, Illia},
+  month    = dec,
+  year     = {2017},
+  keywords = {Computer Science - Machine Learning, Computer Science - Computation and Language},
+  annote   = {arXiv: 1706.03762}
+}
+
+@article{huang_densely_2018,
+  title    = {Densely {Connected} {Convolutional} {Networks}},
+  url      = {http://arxiv.org/abs/1608.06993},
+  abstract = {Recent work has shown that convolutional networks can be substantially deeper, more accurate, and efficient to train if they contain shorter connections between layers close to the input and those close to the output. In this paper, we embrace this observation and introduce the Dense Convolutional Network (DenseNet), which connects each layer to every other layer in a feed-forward fashion. Whereas traditional convolutional networks with L layers have L connections - one between each layer and its subsequent layer - our network has L(L+1)/2 direct connections. For each layer, the feature-maps of all preceding layers are used as inputs, and its own feature-maps are used as inputs into all subsequent layers. DenseNets have several compelling advantages: they alleviate the vanishing-gradient problem, strengthen feature propagation, encourage feature reuse, and substantially reduce the number of parameters. We evaluate our proposed architecture on four highly competitive object recognition benchmark tasks (CIFAR-10, CIFAR-100, SVHN, and ImageNet). DenseNets obtain significant improvements over the state-of-the-art on most of them, whilst requiring less computation to achieve high performance. Code and pre-trained models are available at https://github.com/liuzhuang13/DenseNet .},
+  journal  = {arXiv:1608.06993 [cs]},
+  author   = {Huang, Gao and Liu, Zhuang and van der Maaten, Laurens and Weinberger, Kilian Q.},
+  month    = jan,
+  year     = {2018},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Machine Learning},
+  annote   = {arXiv: 1608.06993}
+}
+
+@article{simonyan_very_2015-1,
+  title    = {Very {Deep} {Convolutional} {Networks} for {Large}-{Scale} {Image} {Recognition}},
+  url      = {http://arxiv.org/abs/1409.1556},
+  abstract = {In this work we investigate the effect of the convolutional network depth on its accuracy in the large-scale image recognition setting. Our main contribution is a thorough evaluation of networks of increasing depth using an architecture with very small (3x3) convolution filters, which shows that a significant improvement on the prior-art configurations can be achieved by pushing the depth to 16-19 weight layers. These findings were the basis of our ImageNet Challenge 2014 submission, where our team secured the first and the second places in the localisation and classification tracks respectively. We also show that our representations generalise well to other datasets, where they achieve state-of-the-art results. We have made our two best-performing ConvNet models publicly available to facilitate further research on the use of deep visual representations in computer vision.},
+  journal  = {arXiv:1409.1556 [cs]},
+  author   = {Simonyan, Karen and Zisserman, Andrew},
+  month    = apr,
+  year     = {2015},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition},
+  annote   = {arXiv: 1409.1556}
+}
+
+@article{simonyan_very_2015-2,
+  title  = {Very {Deep} {Convolutional} {Networks} for {Large}-{Scale} {Image} {Recognition}.},
+  url    = {http://arxiv.org/abs/1409.1556},
+  author = {Simonyan, Karen},
+  year   = {2015}
+}
+
+@article{hendrycks_benchmarking_2019,
+  title    = {Benchmarking {Neural} {Network} {Robustness} to {Common} {Corruptions} and {Surface} {Variations}},
+  url      = {http://arxiv.org/abs/1807.01697},
+  abstract = {In this paper we establish rigorous benchmarks for image classifier robustness. Our first benchmark, ImageNet-C, standardizes and expands the corruption robustness topic, while showing which classifiers are preferable in safety-critical applications. Unlike recent robustness research, this benchmark evaluates performance on commonplace corruptions not worst-case adversarial corruptions. We find that there are negligible changes in relative corruption robustness from AlexNet to ResNet classifiers, and we discover ways to enhance corruption robustness. Then we propose a new dataset called Icons-50 which opens research on a new kind of robustness, surface variation robustness. With this dataset we evaluate the frailty of classifiers on new styles of known objects and unexpected instances of known classes. We also demonstrate two methods that improve surface variation robustness. Together our benchmarks may aid future work toward networks that learn fundamental class structure and also robustly generalize.},
+  journal  = {arXiv:1807.01697 [cs, stat]},
+  author   = {Hendrycks, Dan and Dietterich, Thomas G.},
+  month    = apr,
+  year     = {2019},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Machine Learning, Statistics - Machine Learning, Computer Science - Neural and Evolutionary Computing, Computer Science - Artificial Intelligence},
+  annote   = {arXiv: 1807.01697}
+}
+
+@article{noauthor_notitle_nodate
+}
+
+@incollection{lecun_object_1999,
+  address   = {Berlin, Heidelberg},
+  series    = {Lecture {Notes} in {Computer} {Science}},
+  title     = {Object {Recognition} with {Gradient}-{Based} {Learning}},
+  isbn      = {978-3-540-46805-9},
+  url       = {https://doi.org/10.1007/3-540-46805-6_19},
+  abstract  = {Finding an appropriate set of features is an essential problem in the design of shape recognition systems. This paper attempts to show that for recognizing simple objects with high shape variability such as handwritten characters, it is possible, and even advantageous, to feed the system directly with minimally processed images and to rely on learning to extract the right set of features. Convolutional Neural Networks are shown to be particularly well suited to this task. We also show that these networks can be used to recognize multiple objects without requiring explicit segmentation of the objects from their surrounding. The second part of the paper presents the Graph Transformer Network model which extends the applicability of gradient-based learning to systems that use graphs to represents features, objects, and their combinations.},
+  language  = {en},
+  booktitle = {Shape, {Contour} and {Grouping} in {Computer} {Vision}},
+  publisher = {Springer},
+  author    = {LeCun, Yann and Haffner, Patrick and Bottou, Léon and Bengio, Yoshua},
+  editor    = {Forsyth, David A. and Mundy, Joseph L. and di Gesú, Vito and Cipolla, Roberto},
+  year      = {1999},
+  doi       = {10.1007/3-540-46805-6_19},
+  keywords  = {Convolutional Neural Network, Loss Function, Neural Information Processing System, Object Recognition, Radial Basis Function},
+  pages     = {319--345}
+}
+
+@inproceedings{vu_heritage_2018,
+  title  = {Heritage {Image} {Classification} by {Convolution} {Neural} {Networks}},
+  doi    = {10.1109/MAPR.2018.8337517},
+  author = {Vu, Manh-Tu and Marie, Beurton-Aimar and Van Linh, Le},
+  month  = apr,
+  year   = {2018},
+  pages  = {1--6},
+  file   = {Full Text PDF:/Users/jordan/Zotero/storage/LNMVF8CI/Vu et al. - 2018 - Heritage Image Classification by Convolution Neura.pdf:application/pdf}
+}
+
+@article{krizhevsky_imagenet_2017,
+  title    = {{ImageNet} classification with deep convolutional neural networks},
+  volume   = {60},
+  issn     = {0001-0782, 1557-7317},
+  url      = {https://dl.acm.org/doi/10.1145/3065386},
+  doi      = {10.1145/3065386},
+  abstract = {We trained a large, deep convolutional neural network to classify the 1.2 million high-resolution images in the ImageNet LSVRC-2010 contest into the 1000 different classes. On the test data, we achieved top-1 and top-5 error rates of 37.5\% and 17.0\%, respectively, which is considerably better than the previous state-of-the-art. The neural network, which has 60 million parameters and 650,000 neurons, consists of five convolutional layers, some of which are followed by max-pooling layers, and three fully connected layers with a final 1000-way softmax. To make training faster, we used nonsaturating neurons and a very efficient GPU implementation of the convolution operation. To reduce overfitting in the fully connected layers we employed a recently developed regularization method called “dropout” that proved to be very effective. We also entered a variant of this model in the ILSVRC-2012 competition and achieved a winning top-5 test error rate of 15.3\%, compared to 26.2\% achieved by the second-best entry.},
+  language = {en},
+  number   = {6},
+  journal  = {Communications of the ACM},
+  author   = {Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E.},
+  month    = may,
+  year     = {2017},
+  pages    = {84--90},
+  file     = {Krizhevsky et al. - 2017 - ImageNet classification with deep convolutional ne.pdf:/Users/jordan/Zotero/storage/4LANUZHB/Krizhevsky et al. - 2017 - ImageNet classification with deep convolutional ne.pdf:application/pdf}
+}
+
+@article{krizhevsky_imagenet_2017-1,
+  title    = {{ImageNet} classification with deep convolutional neural networks},
+  volume   = {60},
+  issn     = {0001-0782},
+  url      = {https://doi.org/10.1145/3065386},
+  doi      = {10.1145/3065386},
+  abstract = {We trained a large, deep convolutional neural network to classify the 1.2 million high-resolution images in the ImageNet LSVRC-2010 contest into the 1000 different classes. On the test data, we achieved top-1 and top-5 error rates of 37.5\% and 17.0\%, respectively, which is considerably better than the previous state-of-the-art. The neural network, which has 60 million parameters and 650,000 neurons, consists of five convolutional layers, some of which are followed by max-pooling layers, and three fully connected layers with a final 1000-way softmax. To make training faster, we used non-saturating neurons and a very efficient GPU implementation of the convolution operation. To reduce overfitting in the fully connected layers we employed a recently developed regularization method called "dropout" that proved to be very effective. We also entered a variant of this model in the ILSVRC-2012 competition and achieved a winning top-5 test error rate of 15.3\%, compared to 26.2\% achieved by the second-best entry.},
+  number   = {6},
+  journal  = {Communications of the ACM},
+  author   = {Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E.},
+  year     = {2017},
+  pages    = {84--90},
+  file     = {Full Text PDF:/Users/jordan/Zotero/storage/CEH73C7N/Krizhevsky et al. - 2017 - ImageNet classification with deep convolutional ne.pdf:application/pdf}
+}
+
+@article{zeiler_visualizing_2013,
+  title    = {Visualizing and {Understanding} {Convolutional} {Networks}},
+  url      = {http://arxiv.org/abs/1311.2901},
+  abstract = {Large Convolutional Network models have recently demonstrated impressive classification performance on the ImageNet benchmark. However there is no clear understanding of why they perform so well, or how they might be improved. In this paper we address both issues. We introduce a novel visualization technique that gives insight into the function of intermediate feature layers and the operation of the classifier. We also perform an ablation study to discover the performance contribution from different model layers. This enables us to find model architectures that outperform Krizhevsky {\textbackslash}etal on the ImageNet classification benchmark. We show our ImageNet model generalizes well to other datasets: when the softmax classifier is retrained, it convincingly beats the current state-of-the-art results on Caltech-101 and Caltech-256 datasets.},
+  journal  = {arXiv:1311.2901 [cs]},
+  author   = {Zeiler, Matthew D. and Fergus, Rob},
+  month    = nov,
+  year     = {2013},
+  note     = {arXiv: 1311.2901},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition},
+  file     = {arXiv Fulltext PDF:/Users/jordan/Zotero/storage/E5A4DVHX/Zeiler and Fergus - 2013 - Visualizing and Understanding Convolutional Networ.pdf:application/pdf;arXiv.org Snapshot:/Users/jordan/Zotero/storage/U8CINVLA/1311.html:text/html}
+}
+
+@misc{noauthor_model_2020,
+  title    = {Model {Hacking} {ADAS} to {Pave} {Safer} {Roads} for {Autonomous} {Vehicles}},
+  url      = {https://www.mcafee.com/blogs/other-blogs/mcafee-labs/model-hacking-adas-to-pave-safer-roads-for-autonomous-vehicles/},
+  abstract = {The last several years have been fascinating for those of us who have been eagerly observing the steady move towards autonomous driving. While},
+  language = {en-US},
+  journal  = {McAfee Blog},
+  month    = feb,
+  year     = {2020},
+  file     = {Snapshot:/Users/jordan/Zotero/storage/MXGS8SDJ/model-hacking-adas-to-pave-safer-roads-for-autonomous-vehicles.html:text/html}
+}
+
+@article{noauthor_logical_nodate,
+  title    = {A logical calculus of the ideas immanent in nervous activity},
+  language = {en},
+  pages    = {19},
+  file     = {A logical calculus of the ideas immanent in nervou.pdf:/Users/jordan/Zotero/storage/A9B4A94B/A logical calculus of the ideas immanent in nervou.pdf:application/pdf}
+}
+
+@book{brain_perceptron_1958,
+  title      = {The {Perceptron}: {A} {Probabilistic} {Model} for {Information} {Storage} and {Organization}},
+  shorttitle = {The {Perceptron}},
+  abstract   = {If we are eventually to understand the capability of higher organisms for perceptual recognition, generalization, recall, and thinking, we must first have answers to three fundamental questions: 1. How is information about the physical world sensed, or detected, by the biological system? 2. In what form is information stored, or remembered? 3. How does information contained in storage, or in memory, influence recognition and behavior? The first of these questions is in the province of sensory physiology, and is the only one for which appreciable understanding has been achieved. This article will be concerned primarily with the second and third questions, which are still subject to a vast amount of speculation, and where the few relevant facts currently supplied by neurophysiology have not yet been integrated into an acceptable theory. With regard to the second question, two alternative positions have been maintained. The first suggests that storage of sensory information is in the form of coded representations or images, with some sort of one-to-one mapping between the sensory stimulus 1 The development of this theory has been carried out at the Cornell Aeronautical Laboratory, Inc., under the sponsorship of the Office of Naval Research, Contract Nonr-2381(00). This article is primarily'an adaptation of material reported in Ref. IS, which constitutes the first full report on the program.},
+  publisher  = {https://doi.org/10.1037/h0042519},
+  author     = {Brain, In The and Rosenblatt, F.},
+  year       = {1958},
+  file       = {Citeseer - Snapshot:/Users/jordan/Zotero/storage/Z2WTVXYX/download.html:text/html;Citeseer - Full Text PDF:/Users/jordan/Zotero/storage/H2LJ7AZ9/Brain and Rosenblatt - The Perceptron A Probabilistic Model for Informat.pdf:application/pdf}
+}
+
+@article{minsky_perceptrons_1969,
+  address    = {Cambridge, MA, USA},
+  title      = {Perceptrons: {An} {Introduction} to {Computational} {Geometry}},
+  isbn       = {978-0-262-13043-1},
+  shorttitle = {Perceptrons},
+  language   = {en},
+  publisher  = {MIT Press},
+  author     = {Minsky, Marvin and Papert, Seymour A.},
+  month      = jan,
+  year       = {1969}
+}
+
+@article{warren_s_mcculloch_walter_pitts_logical_1943,
+  title    = {A logical calculus of the ideas immanent in nervous activity},
+  url      = {https://home.csulb.edu/~cwallis/382/readings/482/mccolloch.logical.calculus.ideas.1943.pdf},
+  abstract = {Because of the "all-or-none" character of nervous activity, neural
+              events and the relations among them can be treated by means of propositional logic. It is found that the behavior of every net can be described
+              in these terms, with the addition of more complicated logical means for
+              nets containing circles; and that for any logical expression satisfying
+              certain conditions, one can find a net behaving in the fashion it describes.
+              It is shown that many particular choices among possible neurophysiological assumptions are equivalent, in the sense that for every net behaving under one assumption, there exists another net which behaves under the other and gives the same results, although perhaps not in the
+              same time. Various applications of the calculus are discussed.},
+  language = {en},
+  journal  = {https://doi.org/10.1007/BF02478259},
+  author   = {Warren S. McCulloch, Walter Pitts, WALTER PITTS},
+  year     = {1943},
+  pages    = {19},
+  file     = {A logical calculus of the ideas immanent in nervou.pdf:/Users/jordan/Zotero/storage/FLBTFJH8/A logical calculus of the ideas immanent in nervou.pdf:application/pdf}
+}
+
+@article{rumelhart_learning_1986,
+  title     = {Learning representations by back-propagating errors},
+  volume    = {323},
+  copyright = {1986 Nature Publishing Group},
+  issn      = {1476-4687},
+  url       = {https://www.nature.com/articles/323533a0},
+  doi       = {10.1038/323533a0},
+  abstract  = {We describe a new learning procedure, back-propagation, for networks of neurone-like units. The procedure repeatedly adjusts the weights of the connections in the network so as to minimize a measure of the difference between the actual output vector of the net and the desired output vector. As a result of the weight adjustments, internal ‘hidden’ units which are not part of the input or output come to represent important features of the task domain, and the regularities in the task are captured by the interactions of these units. The ability to create useful new features distinguishes back-propagation from earlier, simpler methods such as the perceptron-convergence procedure1.},
+  language  = {en},
+  number    = {6088},
+  journal   = {Nature},
+  author    = {Rumelhart, David E. and Hinton, Geoffrey E. and Williams, Ronald J.},
+  month     = oct,
+  year      = {1986},
+  note      = {Number: 6088
+               Publisher: Nature Publishing Group},
+  keywords  = {Humanities and Social Sciences, multidisciplinary, Science},
+  pages     = {533--536},
+  file      = {Snapshot:/Users/jordan/Zotero/storage/LYGCGIVH/323533a0.html:text/html}
+}
+
+@article{buitinck_api_2013,
+  title      = {{API} design for machine learning software: experiences from the scikit-learn project},
+  shorttitle = {{API} design for machine learning software},
+  url        = {http://arxiv.org/abs/1309.0238},
+  abstract   = {Scikit-learn is an increasingly popular machine learning li- brary. Written in Python, it is designed to be simple and efficient, accessible to non-experts, and reusable in various contexts. In this paper, we present and discuss our design choices for the application programming interface (API) of the project. In particular, we describe the simple and elegant interface shared by all learning and processing units in the library and then discuss its advantages in terms of composition and reusability. The paper also comments on implementation details specific to the Python ecosystem and analyzes obstacles faced by users and developers of the library.},
+  journal    = {arXiv:1309.0238 [cs]},
+  author     = {Buitinck, Lars and Louppe, Gilles and Blondel, Mathieu and Pedregosa, Fabian and Mueller, Andreas and Grisel, Olivier and Niculae, Vlad and Prettenhofer, Peter and Gramfort, Alexandre and Grobler, Jaques and Layton, Robert and Vanderplas, Jake and Joly, Arnaud and Holt, Brian and Varoquaux, Gaël},
+  month      = sep,
+  year       = {2013},
+  note       = {arXiv: 1309.0238},
+  keywords   = {Computer Science - Machine Learning, Computer Science - Mathematical Software},
+  file       = {arXiv Fulltext PDF:/Users/jordan/Zotero/storage/V4SL7NW5/Buitinck et al. - 2013 - API design for machine learning software experien.pdf:application/pdf;arXiv.org Snapshot:/Users/jordan/Zotero/storage/IGMJHX66/1309.html:text/html}
+}
+
+@article{zheng_improving_2016,
+  address   = {Las Vegas, NV, USA},
+  title     = {Improving the {Robustness} of {Deep} {Neural} {Networks} via {Stability} {Training}},
+  isbn      = {978-1-4673-8851-1},
+  url       = {http://ieeexplore.ieee.org/document/7780854/},
+  doi       = {10.1109/CVPR.2016.485},
+  abstract  = {In this paper we address the issue of output instability of deep neural networks: small perturbations in the visual input can signiﬁcantly distort the feature embeddings and output of a neural network. Such instability affects many deep architectures with state-of-the-art performance on a wide range of computer vision tasks. We present a general stability training method to stabilize deep networks against small input distortions that result from various types of common image processing, such as compression, rescaling, and cropping. We validate our method by stabilizing the stateof-the-art Inception architecture [11] against these types of distortions. In addition, we demonstrate that our stabilized model gives robust state-of-the-art performance on largescale near-duplicate detection, similar-image ranking, and classiﬁcation on noisy datasets.},
+  language  = {en},
+  booktitle = {2016 {IEEE} {Conference} on {Computer} {Vision} and {Pattern} {Recognition} ({CVPR})},
+  publisher = {IEEE},
+  author    = {Zheng, Stephan and Song, Yang and Leung, Thomas and Goodfellow, Ian},
+  month     = jun,
+  year      = {2016},
+  pages     = {4480--4488},
+  file      = {Zheng et al. - 2016 - Improving the Robustness of Deep Neural Networks v.pdf:/Users/jordan/Zotero/storage/4CGHL4UX/Zheng et al. - 2016 - Improving the Robustness of Deep Neural Networks v.pdf:application/pdf}
 }

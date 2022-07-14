@@ -410,7 +410,7 @@
 
         \vpostext{10cm}{\setfontsize{12.5pt}\textbf{A thesis submitted in partial satisfaction of the}}%
         \vpostext{11cm}{\setfontsize{12.5pt}\textbf{requirements for the degree of}}%
-        \vpostext{12cm}{\setfontsize{12.5pt}\textbf{\hnu@endoctor}}%
+        \vpostext{12cm}{\setfontsize{12.5pt}\textbf{\hnu@enmaster}}%
         \vpostext{13cm}{\setfontsize{12.5pt}\textbf{in}}%
         \vpostext{14cm}{\setfontsize{12.5pt}\textbf{\hnu@enmajor}}%
         \vpostext{15cm}{\setfontsize{12.5pt}\textbf{in the}}%
@@ -602,7 +602,7 @@
 \setlength{\parindent}{2\ccwd}
 \setlength{\parskip}{\z@}
 \RequirePackage{upgreek}
-\renewcommand\pi{\uppi}
+% \renewcommand\pi{\uppi}
 \RequirePackage{amssymb}
 \renewcommand\le{\leqslant}
 \renewcommand\leq{\leqslant}

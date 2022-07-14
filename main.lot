@@ -1,8 +1,11 @@
 \addvspace {10.0pt}
 \addvspace {10.0pt}
-\contentsline {table}{\numberline {2.1}{\ignorespaces 示例表格\relax }}{2}{table.caption.7}%
 \addvspace {10.0pt}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Details for Figure \ref {fig:noise_increase}\relax }}{21}{table.caption.21}%
 \addvspace {10.0pt}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Detection results for each dataset. Results are shown for both scores individually ($score_1$ and $score_2$) and combined ($combined$). For each attack, we specify the metric with which it was created ($\infty $ or $2$), whether the attack is targeted ($t$), and the corresponding average $L_2$ distance. \relax }}{39}{table.caption.31}%
+\addvspace {10.0pt}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Peaks observed on normal and adversarial images. Peaks on adversarial examples appear to happen at a sooner noise intensity and reach a higher value.\relax }}{43}{table.caption.34}%
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \contentsfinish 

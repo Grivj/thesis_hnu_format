@@ -1,11 +1,42 @@
 %中文摘要
 \begin{abstract}
-	中文摘要。
-	\keywords{关键字1；关键字2；关键字n}
+	与其他机器学习算法一样，神经网络很容易受到对抗性示例的影响，即包含特制扰
+	动的输入，其唯一目的是欺骗网络进行错误分类。另一方面，由于对神经网络架构
+	的改进，众所周知，它们对输入中的随机扰动更加稳健。这种对随机扰动的鲁棒性
+	促使我提出了一种易于部署的对抗样本检测方法，该方法可以测量将随机噪声应用
+	于输入图像之前和之后的预测不一致性。在三个流行基准 (Dogs vs.
+	Cats、CIFAR-10 和 ImageNet) 的子集上评估该方法表明，它在针对更高分辨率图
+	像的各种攻击中实现了高对抗样本检测性能。我的方法的主要优点是简单，计算成
+	本低，并且不需要任何关于所使用攻击的先验知识，这使得我的方法很容易集成到
+	其他防御框架中.
+
+	我提出了一种检测对抗样本的新方法，该方法基于在输入上故意引入不同强度的高
+	斯噪声。然后，计算两个分数，以评估模型在应用噪声之前和之后在不同强度下的预测差
+	异。这种方法的优点是检测效率不依赖于关于所使用攻击的先验知识，因此可以应用于广泛
+	的攻击和不同的对抗性扰动预算。此外，与最先进的防御或检测方法相反，我的方法对计算
+	的要求很低，因为不需要对模型参数进行训练或优化。最后，此方法可以与其他检测方法结
+	合使用，以提高整体应用程序的性能。我提出的方法是在研究了将加性高斯噪声应用于正常
+	图像和对抗样本的影响并观察到据我所知并且在这项工作时尚未在之前的工作中讨论过的差
+	异之后出现的。
+	\keywords{深度学习；计算机视觉；对抗性例子}
 \end{abstract}
 
 %英文摘要
 \begin{enabstract}
-	英文摘要。
-	\enkeywords{Keyword1; Keyword2; Keywordn}
+	Like other machine learning algorithms, neural networks have been vulnerable
+	to adversarial examples, \emph{i.e.}, inputs containing specifically crafted
+	perturbations whose only objective is to fool a network into
+	misclassification. On the other hand, because of the improvements made on
+	neural network architectures, they are known to be much more robust to
+	random perturbations in the input. This robustness to random perturbations
+	motivated me to propose an easy-to-deploy adversarial example detection
+	method that measures prediction inconsistencies before and after applying
+	random noise to an input image. Evaluating the method on subsets of three
+	popular benchmarks (Dogs vs. Cats, CIFAR-10, and ImageNet) shows that it
+	achieves high adversarial example detection performance for various attacks
+	on higher resolution images. The main advantages of my approach are its
+	simplicity, low computational cost, and the fact that it does not require
+	any prior knowledge of the attack used, which makes it easy to integrate my
+	method into other defense frameworks.
+	\enkeywords{Deep Learning; Computer Vision; Adversarial Examples}
 \end{enabstract}

@@ -6,46 +6,53 @@ Database file #1: references.bib
 -- HNUTThesis.bst version 0.1 (2017/08/19) by Cheng Chang.
 -- https://github.com/chengchang/hnuthesis
 -- See the "userguide.pdf" manual for usage information.[2021.4] modified by yusanshi <meet.leiyu@gmail.com>
+Warning--there's a publisher but no address in brain_perceptron_1958
+Warning--empty journal in minsky_perceptrons_1969
+Warning--empty journal in krizhevsky_learning_2009
+Warning--empty journal in elson_asirra_2007
+Warning--empty journal in simonyan_very_2015-2
+Warning--empty journal in zheng_improving_2016
 
 Done.
-You've used 1 entry,
+You've used 36 entries,
             2530 wiz_defined-function locations,
-            565 strings with 4288 characters,
-and the built_in function-call counts, 448 in all, are:
-= -- 42
-> -- 17
-< -- 1
-+ -- 8
-- -- 4
-* -- 35
-:= -- 61
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 0
+            773 strings with 13710 characters,
+and the built_in function-call counts, 7891 in all, are:
+= -- 693
+> -- 493
+< -- 4
++ -- 230
+- -- 115
+* -- 414
+:= -- 1251
+add.period$ -- 102
+call.type$ -- 36
+change.case$ -- 3
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 20
-empty$ -- 37
-format.name$ -- 5
-if$ -- 104
+cite$ -- 42
+duplicate$ -- 343
+empty$ -- 682
+format.name$ -- 148
+if$ -- 1788
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 1
-newline$ -- 9
-num.names$ -- 1
-pop$ -- 5
+int.to.str$ -- 36
+missing$ -- 39
+newline$ -- 186
+num.names$ -- 36
+pop$ -- 165
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 21
+skip$ -- 304
 stack$ -- 0
-substring$ -- 32
-swap$ -- 10
-text.length$ -- 1
+substring$ -- 251
+swap$ -- 42
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 5
 type$ -- 0
-warning$ -- 0
-while$ -- 4
-width$ -- 2
-write$ -- 14
+warning$ -- 6
+while$ -- 57
+width$ -- 38
+write$ -- 375
+(There were 6 warnings)
