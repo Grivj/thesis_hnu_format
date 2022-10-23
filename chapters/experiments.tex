@@ -5,7 +5,25 @@
 \section{Overview}
 \label{sec:experiments_overview}
 
-\begin{figure}[!t]
+
+Adversarial examples can be seen as a worst-case noise that fools the model into
+misclassification when applied to an image. On the other hand, neural networks
+are relatively robust to random corruptions such as Gaussian noise.
+
+My intuition is that applying random noise to an adversarial example could hide
+or alter parts of the adversarial perturbation, thus diminishing or even
+nullifying its effect.
+
+In order to apply a random transformation to an image $x$, we generate a
+Gaussian noise $\tilde{y}=\mathcal{N}(0,1)$ that we add to the image in order to
+create a noisy version $\tilde{x}$:
+\begin{align} \label{eq:noisy_version}
+    \tilde{x}=x+\tilde{y}\kappa,
+\end{align}
+where $\kappa$, is the standard deviation used to scale down or up the noise
+intensity.
+
+\begin{figure}
     \subfloat[]{%
         \includegraphics[clip,width=.33\linewidth]{Figures/noise/std:0.0,l2:
             0.0,PSNR:100.0.png}%
@@ -33,52 +51,33 @@
     \label{fig:noise_increase}
 \end{figure}
 
-Adversarial examples can be seen as a worst-case noise that fools the model into
-misclassification when applied to an image. On the other hand, neural networks
-are relatively robust to random corruptions such as Gaussian noise.
-
-My intuition is that applying random noise to an adversarial example could hide
-or alter parts of the adversarial perturbation, thus diminishing or even
-nullifying its effect.
-
-In order to apply a random transformation to an image $x$, we generate a
-Gaussian noise $\tilde{y}=\mathcal{N}(0,1)$ that we add to the image in order to
-create a noisy version $\tilde{x}$:
-\begin{align} \label{eq:noisy_version}
-    \tilde{x}=x+\tilde{y}\kappa,
-\end{align}
-where $\kappa$, is the standard deviation used to scale down or up the noise
-intensity.
-
 Fig \ref{fig:noise_increase} shows the impact of increasing $\kappa$ on an image
 and shows the corresponding $L_2$ distance and peak signal-to-noise ratio (PSNR)
 of the noise mask.
 
-\begin{table}[!htb]
+\begin{table}[htb]
     \centering
-    \begin{tabular}{|c c c c|}
-        \hline
+    \begin{tabular}{c c c c}
+        \toprule
         Image & $k$  & $L_{2}$ & PSNR  \\
-        \hline
+        \midrule
         A     & 0.00 & 0.00    & 100   \\
         B     & 0.02 & 7.76    & 34.01 \\
         C     & 0.04 & 15.46   & 28.05 \\
         D     & 0.06 & 23.11   & 24.60 \\
         E     & 0.08 & 30.40   & 22.18 \\
         F     & 0.10 & 37.36   & 20.34 \\
-        \hline
+        \bottomrule
     \end{tabular}
     \caption{Details for Figure \ref{fig:noise_increase}}
     \label{table:noise_increase}
 \end{table}
-
 
 To further motivate and formulate the proposed method discussed in section
 \ref{Methodology}, I first perform a series of experiments detailed in the
 remainder of this section to verify that the intuition mentioned above holds
 correct.
 
-\clearpage
 \section{Experimental Settings}
 Below I describe the datasets and models used, as well as the settings used to
 configure the attack methods.
@@ -88,50 +87,70 @@ configure the attack methods.
 
 To conduct the experiments, I collect data from three datasets:
 \begin{itemize}
-    \item CIFAR-10 by \cite{krizhevsky_learning_2009}, widely used dataset
+    \item CIFAR-10 \cite{krizhevsky_learning_2009}, widely used dataset
           consisting of 60000 $32 \times 32$ RGB images divided into ten
           different classes (e.g., airplane, automobile, bird.). For the
           experiments, I use the 10.000 images present in the test set.
-    \item ImageNet by \cite{russakovsky_imagenet_2015}, popular image database
+    \item ImageNet \cite{russakovsky_imagenet_2015}, popular image database
           containing over 1.300.000 $224 \times 224$ RGB images divided into
           1000 different classes. For our experiments, rather than using the
           entirety of the dataset, I created a subset containing 10 of ImageNet
           classes.
-    \item Dogs vs. Cats by \cite{elson_asirra_2007}, the Asirra (Animal Species
+    \item Dogs vs. Cats \cite{elson_asirra_2007}, the Asirra (Animal Species
           Image Recognition for Restricting Access) is a real-world Kaggle
           dataset containing 25.000 $224 \times 224$ resized RGB images divided
           into two classes: dogs and cats.
 \end{itemize}
 
-For the models, I use a Very Deep Convolutional Networks for Large-Scale Image
-Recognition with 11 layers introduced by \cite{simonyan_very_2015-2}. The
-complete architecture of the VGG-11 model is shown in figure \ref{fig:vgg11}.
-\begin{figure}[ht]
-    \includegraphics[clip,width=\columnwidth]{Figures/experiments/vgg_architecture.png}%
-    \caption{VGG configurations, from 11 layers (A) to 19 layers (E).}
-    \label{fig:vgg11}
-\end{figure}
+For the models, we use a Very Deep Convolutional Networks for Large-Scale Image
+Recognition with 11 layers \cite{simonyan_very_2015-2}. The
+complete architecture of the VGG-11 model is shown in table \ref{table:vgg11}.
 
-For the experiments using the ImageNet and Dogs vs. Cats datasets, the model is
-first trained on ImageNet and then fine-tuned for the Dogs vs. Cats dataset.
+\begin{table}[htb]
+    \centering
+    \begin{tabular}{c c}
+        \toprule
+           & VGG 11             \\
+           & Input (224x224x3)  \\
+        \midrule
+        1  & Conv. 64           \\
+           & Maxpool            \\
+        \hline
+        2  & Conv. 128          \\
+           & Maxpool            \\
+        \hline
+        3  & Conv. 256          \\
+        4  & Conv. 256          \\
+           & Maxpool            \\
+        \hline
+        5  & Conv. 512          \\
+        6  & Conv. 512          \\
+           & Maxpool            \\
+        \hline
+        7  & Conv. 512          \\
+        8  & Conv. 512          \\
+           & Maxpool            \\
+        \hline
+        9  & FC 4096            \\
+        10 & FC 4096            \\
+        11 & FC 1000 ($\sigma$) \\
+        \bottomrule
+    \end{tabular}
+    \caption{VGG configuration with 11 layers}
+    \label{table:vgg11}
+\end{table}
 
-For the models, I use Very Deep Convolutional Networks for Large-Scale Image
-Recognition with 11 layers introduced by \cite{simonyan_very_2015-2}. The
-complete architecture of the VGG architecture is shown in figure
-\ref{fig:vgg11}.
-
-I use pre-trained on ImageNet models open-sourced by PyTorch for the experiments
-using the ImageNet and Dogs vs. Cats datasets. For Dogs vs. Cats, the model is
-fined-tuned, \emph{i.e.,} the last few layers' parameters are updated instead of
-training the whole network from scratch. For CIFAR-10, I train the model
-following the authors instructions.
+We use pre-trained on ImageNet models open-sourced by PyTorch for the
+experiments using the ImageNet and Dogs vs. Cats datasets. For Dogs vs. Cats,
+the model is fined-tuned, \emph{i.e.,} the last few layers' parameters are
+updated instead of training the whole network from scratch.
 
 \subsection{Attacks}
 \label{sec:attack}
 I implement the attacking methods introduced in Section
-\ref{Adversarial_examples} using the FoolBox library by
-\cite{rauber_foolbox_2020}. For targeted attacks defined in section
-\ref{Adversarial_examples}, the target $t$ class is selected randomly such that
+\ref{Adversarial_examples} using the FoolBox library \cite{rauber_foolbox_2020}.
+For targeted attacks defined in section \ref{Adversarial_examples}, the target
+$t$ class is selected randomly such that
 \begin{align} \label{eq:targeted}
     \left\{ t:t\in C \backslash \left\{
     y\right\}\right\},
@@ -191,10 +210,10 @@ different $\kappa$ (Eq. \eqref{eq:noisy_version}) values. Finally, we follow the
 same procedure for adversarial examples and generate 1000 samples with the BIM,
 DDN, and CW methods.
 
-Figure \ref{fig:consistency} the average classification consistency of input
-types and at different $\kappa$. We observe the average consistency to decrease
-slowly as $\kappa$ increases for normal images. This moderate decrease shows
-that, as expected, the model is not significantly affected by the random
+Figure \ref{fig:consistency} shows the average classification consistency of
+input types and at different $\kappa$. We observe the average consistency to
+decrease slowly as $\kappa$ increases for normal images. This moderate decrease
+shows that, as expected, the model is not significantly affected by the random
 perturbation added to the image. On the contrary, we observe that adversarial
 examples' classification consistency decreases rapidly as $\kappa$ increases.
 These results corroborate my intuition that introducing random perturbations to
