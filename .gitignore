@@ -1,0 +1,15 @@
+indent.log
+main.aux
+main.fdb_latexmk
+main.fls
+main.lof
+main.log
+main.lot
+main.pdf
+main.synctex.gz
+main.tex
+main.toc
+main.xdv
+
+.vscode
+.DS_store
