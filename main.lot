@@ -1,9 +1,10 @@
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
-\contentsline {table}{\numberline {3.1}{\ignorespaces Details for Figure \ref {fig:noise_increase}\relax }}{24}{table.caption.21}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Details for Figure \ref {fig:noise_increase}\relax }}{22}{table.caption.21}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces VGG configuration with 11 layers\relax }}{24}{table.caption.22}%
 \addvspace {10.0pt}
-\contentsline {table}{\numberline {4.1}{\ignorespaces Detection results for each dataset. Results are shown for both scores individually ($score_1$ and $score_2$) and combined ($combined$). For each attack, we specify the metric with which it was created ($\infty $ or $2$), whether the attack is targeted ($t$), and the corresponding average $L_2$ distance. \relax }}{44}{table.caption.31}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Detection results for each dataset. Results are shown for both scores individually ($score_1$ and $score_2$) and combined ($combined$). For each attack, we specify the metric with which it was created ($\infty $ or $2$), whether the attack is targeted ($t$), and the corresponding average $L_2$ distance. \relax }}{42}{table.caption.31}%
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}

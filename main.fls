@@ -1820,9 +1820,6 @@ INPUT Figures/noise/std:0.08,l2: 19.91,PSNR:22.18.png
 INPUT ./Figures/noise/std:0.1,l2: 24.61,PSNR:20.34.png
 INPUT ./Figures/noise/std:0.1,l2: 24.61,PSNR:20.34.png
 INPUT Figures/noise/std:0.1,l2: 24.61,PSNR:20.34.png
-INPUT ./Figures/experiments/vgg_architecture.png
-INPUT ./Figures/experiments/vgg_architecture.png
-INPUT Figures/experiments/vgg_architecture.png
 INPUT ./figures/fig2a.pdf
 INPUT ./figures/fig2a.pdf
 INPUT figures/fig2a.pdf

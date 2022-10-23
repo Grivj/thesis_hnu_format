@@ -16,13 +16,14 @@
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Fully connected neural network containing two hidden layers. \relax }}{8}{figure.caption.13}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Widely used activation functions. \relax }}{10}{figure.caption.14}%
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Architecture of a classic convolutional neural network. \relax }}{12}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces $11 \times 11 \times 3$ filters learned by the first convolutional layer on $224 \times 224 \times 3$ input images, experiment by \cite {krizhevsky_imagenet_2017-1}. \relax }}{14}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Filters learned by the fifth convolutional layer, experiment by \cite {zeiler_visualizing_2013}. \relax }}{15}{figure.caption.17}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Speed limit signs modified (B, C) that fools the Tesla model X and S (model 2016). (B) is identified as a 45-mph sign, while (C) is identified as a 85-mph speed sign.\relax }}{16}{figure.caption.18}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{16}{subfigure.9.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{16}{subfigure.9.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{16}{subfigure.9.3}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces $11 \times 11 \times 3$ filters learned by the first convolutional layer on $224 \times 224 \times 3$ input images, experiment by \cite {krizhevsky_imagenet_2017-1}. \relax }}{13}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Filters learned by the fifth convolutional layer, experiment by \cite {zeiler_visualizing_2013}. \relax }}{14}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Speed limit signs modified (B, C) that fools the Tesla model X and S (model 2016). (B) is identified as a 45-mph sign, while (C) is identified as a 85-mph speed sign.\relax }}{15}{figure.caption.18}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{15}{subfigure.9.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{15}{subfigure.9.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{15}{subfigure.9.3}%
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Adversarial examples generated with different methods. The original input image (A) is correctly classified as a "church", while all the generated samples: (B), (D) and (F) are identified as a "chicken" by the model. \relax }}{19}{figure.caption.19}%
+\addvspace {10.0pt}
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Increasing the noise intensity $k$ on an ImageNet sample. Details in Table \ref {table:noise_increase}.\relax }}{23}{figure.caption.20}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{23}{subfigure.1.1}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{23}{subfigure.1.2}%
@@ -30,47 +31,45 @@
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{23}{subfigure.1.4}%
 \contentsline {subfigure}{\numberline {(e)}{\ignorespaces {}}}{23}{subfigure.1.5}%
 \contentsline {subfigure}{\numberline {(f)}{\ignorespaces {}}}{23}{subfigure.1.6}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Consistency comparison between normal images and adversarial examples using different methods and perturbation budgets. As $\kappa $ (see \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {eq:noisy_version}\unskip \@@italiccorr )}}) increases, the consistency decreases, more so for adversarial examples, unless we also increase the adversarial perturbation budget as seen in (b).\relax }}{26}{figure.caption.23}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{26}{subfigure.2.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{26}{subfigure.2.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Shows the accuracy comparison between normal images and adversarial examples; as $\kappa $ increases, the accuracy of adversarial examples first increases before decreasing similarly to normal images.\relax }}{27}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Comparison between the logits of an ImageNet image before ($Z(x)$) and after adding noise to the input ($Z(\tilde {x})$). When the input is normal (A), the difference between predictions is small, but becomes larger when the input is adversarial (B).\relax }}{30}{figure.caption.25}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Normal Image}}}{30}{subfigure.4.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Adversarial Example (BIM)}}}{30}{subfigure.4.2}%
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces VGG configurations, from 11 layers (A) to 19 layers (E).\relax }}{26}{figure.caption.22}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Consistency comparison between normal images and adversarial examples using different methods and perturbation budgets. As $\kappa $ (see \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {eq:noisy_version}\unskip \@@italiccorr )}}) increases, the consistency decreases, more so for adversarial examples, unless we also increase the adversarial perturbation budget as seen in (b).\relax }}{28}{figure.caption.23}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{28}{subfigure.3.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{28}{subfigure.3.2}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Shows the accuracy comparison between normal images and adversarial examples; as $\kappa $ increases, the accuracy of adversarial examples first increases before decreasing similarly to normal images.\relax }}{29}{figure.caption.24}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Comparison between the logits of an ImageNet image before ($Z(x)$) and after adding noise to the input ($Z(\tilde {x})$). When the input is normal (A), the difference between predictions is small, but becomes larger when the input is adversarial (B).\relax }}{32}{figure.caption.25}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Normal Image}}}{32}{subfigure.5.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Adversarial Example (BIM)}}}{32}{subfigure.5.2}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The framework of the discussed method.\relax }}{31}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Histograms showing the $score_{1}$ per sample type.\relax }}{33}{figure.caption.27}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Normal images compared with different adversarial examples generation methods.}}}{33}{subfigure.2.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Normal images compared with BIM-generated samples at varying perturbation budgets.}}}{33}{subfigure.2.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Histograms showing the $score_{2}$ per sample type.\relax }}{34}{figure.caption.28}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Normal images compared with different adversarial examples generation methods.}}}{34}{subfigure.3.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Normal images compared with BIM-generated samples at varying perturbation budgets.}}}{34}{subfigure.3.2}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces ROC-AUC for each classifier and each dataset.\relax }}{36}{figure.caption.29}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$score_1$ ImageNet}}}{36}{subfigure.4.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$score_2$ ImageNet}}}{36}{subfigure.4.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$score_1$ D. vs. C.}}}{36}{subfigure.4.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$score_2$ D. vs. C.}}}{36}{subfigure.4.4}%
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$score_1$ CIFAR-10}}}{36}{subfigure.4.5}%
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {$score_2$ CIFAR-10}}}{36}{subfigure.4.6}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Histograms showing the number of times an input was detected as positive on ImageNet.\relax }}{39}{figure.caption.30}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$score_1$}}}{39}{subfigure.5.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$score_2$}}}{39}{subfigure.5.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Scores combined}}}{39}{subfigure.5.3}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Normal image (A), adversarial perturbation (magnified by 10) (B), adversarial example (C). \relax }}{43}{figure.caption.32}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{43}{subfigure.6.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{43}{subfigure.6.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{43}{subfigure.6.3}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces comparing the number of times the thresholds are respected between a normal image and an adversarial example. $score_1$ in (A), $score_2$ in (B). \relax }}{43}{figure.caption.33}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{43}{subfigure.7.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{43}{subfigure.7.2}%
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces The framework of the discussed method.\relax }}{33}{figure.caption.26}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Histograms showing the $score_{1}$ per sample type.\relax }}{35}{figure.caption.27}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Normal images compared with different adversarial examples generation methods.}}}{35}{subfigure.2.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Normal images compared with BIM-generated samples at varying perturbation budgets.}}}{35}{subfigure.2.2}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Histograms showing the $score_{2}$ per sample type.\relax }}{36}{figure.caption.28}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Normal images compared with different adversarial examples generation methods.}}}{36}{subfigure.3.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Normal images compared with BIM-generated samples at varying perturbation budgets.}}}{36}{subfigure.3.2}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces ROC-AUC for each classifier and each dataset.\relax }}{38}{figure.caption.29}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$score_1$ ImageNet}}}{38}{subfigure.4.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$score_2$ ImageNet}}}{38}{subfigure.4.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$score_1$ D. vs. C.}}}{38}{subfigure.4.3}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$score_2$ D. vs. C.}}}{38}{subfigure.4.4}%
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$score_1$ CIFAR-10}}}{38}{subfigure.4.5}%
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {$score_2$ CIFAR-10}}}{38}{subfigure.4.6}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Histograms showing the number of times an input was detected as positive on ImageNet.\relax }}{41}{figure.caption.30}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$score_1$}}}{41}{subfigure.5.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$score_2$}}}{41}{subfigure.5.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Scores combined}}}{41}{subfigure.5.3}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Normal image (A), adversarial perturbation (magnified by 10) (B), adversarial example (C). \relax }}{45}{figure.caption.32}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{45}{subfigure.6.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{45}{subfigure.6.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{45}{subfigure.6.3}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces comparing the number of times the thresholds are respected between a normal image and an adversarial example. $score_1$ in (A), $score_2$ in (B). \relax }}{45}{figure.caption.33}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{45}{subfigure.7.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{45}{subfigure.7.2}%
-\addvspace {10.0pt}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Peaks observed on normal and adversarial images. Peaks on adversarial examples appear to happen at a sooner noise intensity and reach a higher value.\relax }}{48}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{48}{subfigure.1.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{48}{subfigure.1.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{48}{subfigure.1.3}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{48}{subfigure.1.4}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Peaks observed on normal and adversarial images. Peaks on adversarial examples appear to happen at a sooner noise intensity and reach a higher value.\relax }}{46}{figure.caption.34}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{46}{subfigure.1.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{46}{subfigure.1.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{46}{subfigure.1.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{46}{subfigure.1.4}%
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \contentsfinish 
