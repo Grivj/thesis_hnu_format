@@ -2,13 +2,6 @@
 \label{Methodology}
 \overridetextsize
 
-\begin{figure}[htp]
-    \includegraphics[clip,width=\columnwidth]{Figures/methodology/Framework.pdf}%
-
-    \caption{The framework of the discussed method.}
-    \label{fig:framework}
-\end{figure}
-
 
 As observed during the experiments conducted in section \ref{sub:consistency}
 and section \ref{sub:logits_differences}, the usage of Gaussian noise to alter
@@ -22,6 +15,12 @@ predictions before and after applying random noise to the input image space.
 From the two scores computed for each input, we can determine if an input is
 adversarial or not.
 
+\begin{figure}[htp]
+    \includegraphics[clip,width=\columnwidth]{Figures/methodology/Framework.pdf}%
+
+    \caption{The framework of the discussed method.}
+    \label{fig:framework}
+\end{figure}
 
 \section{Scores}
 \label{sub:detection_metrics}
@@ -93,10 +92,10 @@ As seen in figures \ref{fig:score_1} and \ref{fig:score_2}, using a $\kappa$ of
 $0.03$, we observe the distribution of normal images and adversarial examples
 differs. However, we can observe in \ref{fig:score_2}B that when the
 perturbation budget increases, the distribution of adversarial samples starts to
-join the same distribution as normal images. I found each score to perform
-differently for various attacking methods and perturbation budgets. Notably,
-$score_{1}$ seem to be less affected by the perturbation budgets of the attacks,
-offering a better generalization over various budgets.
+join the same distribution as normal images. Each score performs differently for
+various attacking methods and perturbation budgets. Notably, $score_{1}$ seem to
+be less affected by the perturbation budgets of the attacks, offering a better
+generalization.
 
 \newpage
 
@@ -126,16 +125,15 @@ offering a better generalization over various budgets.
     \label{fig:rocs}
 \end{figure}
 
-To demonstrate the effectiveness of each metric in a detection scenario, using
-the python library by \cite{buitinck_api_2013}, I build a threshold-based binary
-classifier for each attacking method on each dataset. The classifiers can either
-classify an input as negative (normal images) or positive (adversarial example).
-Figure \ref{fig:rocs} shows the Receiver Operating Characteristic Curve (ROC)
-and Area Under the Curve (AUC) of each classifier. Following my previous
-observations, we verify again that $score_1$ can effectively identify
-adversarial examples from diverse methods and even at different perturbation
-sizes, showing an overall AUC of 98.65\% on ImageNet and 99.09\% on Dogs vs.
-Cats.
+To demonstrate the effectiveness of each metric in a detection scenario, we
+build a threshold-based binary classifier for each attacking method on each
+dataset. The classifiers can either classify an input as negative (normal
+images) or positive (adversarial example). Figure \ref{fig:rocs} shows the
+Receiver Operating Characteristic Curve (ROC) and Area Under the Curve (AUC) of
+each classifier. Following my previous observations, we verify again that
+$score_1$ can effectively identify adversarial examples from diverse methods and
+even at different perturbation sizes, showing an overall AUC of 98.65\% on
+ImageNet and 99.09\% on Dogs vs. Cats.
 
 \section{Method-Agnostic Approach}
 This method-specific approach described previously is suitable for displaying
