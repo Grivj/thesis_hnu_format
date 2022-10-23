@@ -1,14 +1,7 @@
 \chapter{Related Work}
 \label{RelatedWork}
-
 \section{Neural Networks}
 \label{neural_networks}
-
-\begin{figure}[ht]
-    \includegraphics[clip,width=1\columnwidth]{Figures/related/biological_neuron.png}
-    \caption{ Representation of a biological neuron. }
-    \label{fig:biological_neuron}
-\end{figure}
 
 \overridetextsize
 Artificial Intelligence (A.I.), Deep Learning, and Machine Learning have become
@@ -21,10 +14,16 @@ capabilities in most scenarios, have been consequent.
 The enthusiasm of the general public and scientific community in artificial
 intelligence is relatively recent; however, this idea of artificially mimicking
 the human brain (seen in figure \ref{fig:biological_neuron}) dates back almost a
-century, when \cite{warren_s_mcculloch_walter_pitts_logical_1943}, a
-neurophysiologist and a mathematician, proposed the first mathematical model of
-a neuron (see figure \ref{fig:mccullock_neuron}) called the McCulloch-Pitts
-Neuron.
+century, when a neurophysiologist and a mathematician proposed the first
+mathematical model of a neuron (see figure \ref{fig:mccullock_neuron}) called
+the McCulloch-Pitts Neuron \cite{warren_s_mcculloch_walter_pitts_logical_1943}.
+
+\begin{figure}[ht]
+    \includegraphics[clip,width=1\columnwidth]{Figures/related/biological_neuron.png}
+    \caption{ Representation of a biological neuron. }
+    \label{fig:biological_neuron}
+\end{figure}
+
 \begin{figure}[htp]
     \centering
     \includegraphics[clip,width=.5\columnwidth]{Figures/related/cullock-neuron.png}
@@ -33,7 +32,7 @@ Neuron.
 \end{figure}
 
 Fifteen years later, a psychologist used the McCulloch-Pitts Neuron, where he
-proposed the Mark I Perceptron, \cite{brain_perceptron_1958}. The breakthrough
+proposed the Mark I Perceptron \cite{brain_perceptron_1958}. The breakthrough
 proposed by Rosenblatt was that the network could learn by modifying the
 neurons' weights through successively passed inputs to minimize the difference
 between the desired output and the actual output.
@@ -194,8 +193,8 @@ or its modification Leaky ReLU:
 \end{equation}
 We refer to passing the input through layer-by-layer like evoked beforehand as
 "forward propagation." Forward propagation is one of the core processes needed
-to train a neural network. Backpropagation, by \cite{rumelhart_learning_1986} is
-the next step in this process, and it refers to the method of calculating the
+to train a neural network. Backpropagation \cite{rumelhart_learning_1986} is the
+next step in this process, and it refers to the method of calculating the
 gradient of the parameters of the neural network, i.e., weights and biases.
 Inversely with forward propagation, this method traverses the network from the
 output to the input to compute gradient with respect to some parameters. The
@@ -236,8 +235,8 @@ likely class label can be written as $C(x)=\textup{argmax}_{i}{(F(x)_{i})}$.
     \label{fig:cnn}
 \end{figure}
 
-Convolutional neural networks (CNNs), by \cite{lecun_object_1999}, similarly to
-the neural network architectures discussed in the previous section
+Convolutional neural networks (CNNs) \cite{lecun_object_1999}, similarly to the
+neural network architectures discussed in the previous section
 \ref{neural_networks} are a class of artificial neural networks. CNNs are
 commonly used in computer vision to extract features from images or videos and
 have been shown to work exceptionally well for this type of data. They are
@@ -256,6 +255,7 @@ blue). These convolutional layers can drastically reduce the number of
 parameters, thus the model's size.
 
 
+
 Convolutional neural networks, or ConvNets, transform the input image into the
 final output vector containing a score for each class through a sequence of
 layers. Figure \ref{fig:cnn} shows an example architecture for a convolutional
@@ -272,6 +272,13 @@ This architecture comports:
           last layers learn more complex ones, as seen in figure
           \ref{fig:kernels_5}, since they are combinations of all the previous
           layer's filters.
+          \begin{figure}[ht]
+              \includegraphics[clip,width=1\columnwidth]{Figures/related/kernels.jpeg}
+              \caption{ $11 \times 11 \times 3$ filters learned by the first convolutional
+                  layer on $224 \times 224 \times 3$ input images, experiment by
+                  \cite{krizhevsky_imagenet_2017-1}. }
+              \label{fig:kernels}
+          \end{figure}
     \item Pooling layers: these layers will perform a down-sampling operation
           along the spatial dimensions, \emph{e.g.,} width and height. The
           primary function of a pooling layer is to reduce the spatial size of
@@ -285,13 +292,7 @@ This architecture comports:
           each class.
 \end{itemize}
 
-\begin{figure}[ht]
-    \includegraphics[clip,width=1\columnwidth]{Figures/related/kernels.jpeg}
-    \caption{ $11 \times 11 \times 3$ filters learned by the first convolutional
-        layer on $224 \times 224 \times 3$ input images, experiment by
-        \cite{krizhevsky_imagenet_2017-1}. }
-    \label{fig:kernels}
-\end{figure}
+
 
 \begin{figure}[htp]
     \includegraphics[clip,width=1\columnwidth]{Figures/related/kernels_5.png}
@@ -311,7 +312,19 @@ convolutional neural networks are the only type of architecture that I consider.
 
 \section{Adversarial Examples}
 \label{Adversarial_examples}
-\begin{figure}[ht]
+
+As seen with figure \ref{fig:adversarial_examples}, adversarial examples are
+samples that contain intentional feature modifications that cause a model to
+misclassify the sample, \emph{e.g.} an image of a "shark" being misclassified as
+a "bee" after adding an invisible (for a human observer) modification to the
+image.
+
+A neural network classifying an image of a shark as a bee may only seem comical
+and not particularly problematic. However, with the rapidly growing usage of
+neural networks in real-world applications, we need to have the certitude that
+the models in use will not be as trivially fooled.
+
+\begin{figure}[b]
     \centering
     \subfloat[]{%
         \includegraphics[clip,width=.33\linewidth]{Figures/related/artificial_examples/7.jpeg}%
@@ -325,17 +338,6 @@ convolutional neural networks are the only type of architecture that I consider.
     \label{fig:mcafee_tesla}
 \end{figure}
 
-As seen with figure \ref{fig:adversarial_examples}, adversarial examples are
-samples that contain intentional feature modifications that cause a model to
-misclassify the sample, \emph{e.g.} an image of a "shark" being misclassified as
-a "bee" after adding an invisible (for a human observer) modification to the
-image.
-
-A neural network classifying an image of a shark as a bee may only seem comical
-and not particularly problematic. However, with the rapidly growing usage of
-neural networks in real-world applications, we need to have the certitude that
-the models in use will not be as trivially fooled.
-
 Recently, McAfee Advanced Threat Research researchers experimented with
 adversarial examples in a physical context (\cite{noauthor_model_2020}). They
 physically applied modifications to road speed signs in order for a Tesla car to
@@ -345,6 +347,8 @@ road sign (A) as well as two of the physical adversarial examples they created
 wrongly identified as a 45-mph sign with 99.88\% confidence, and (C) is also
 wrongly identified, but as an 85-mph sign! In this context, it is easy to
 imagine why and how this can be a problem that needs to be addressed.
+
+
 
 
 With the ever-growing research on the vulnerability of NNs, there are now many
@@ -379,22 +383,24 @@ The remainder of this section contains a brief explanation of some of the
 popular methods used to generate adversarial examples.
 
 \paragraph{Fast Gradient Sign Method (FGSM).}
-\cite{goodfellow_explaining_2015} first introduced a method for crafting
-adversarial examples against GoogLeNet \cite{szegedy_going_2014}. To generate an
-adversarial sample $x^{\prime}$ that maximizes the objective $J$, FGSM uses the
-gradients of the cost function with respect to the normal input image $x$:
+Ian Goodfellow \emph{et al} first introduced a method for crafting adversarial examples
+\cite{goodfellow_explaining_2015} against GoogLeNet \cite{szegedy_going_2014}.
+To generate an adversarial sample $x^{\prime}$ that maximizes the objective $J$,
+FGSM uses the gradients of the cost function with respect to the normal input
+image $x$:
 \begin{align} \label{eq:fgsm} x^{\prime}=x+\epsilon
     sign\left(\nabla_{x}J\left(\Theta,x,y\right)\right),\end{align} where the
 multiplier $\epsilon$ is used to ensure that the perturbation is kept small, and
 $\Theta$ represents the parameters of the model.
 
 \paragraph{Basic Iterative Method (BIM).}
-\cite{kurakin_adversarial_2017} proposed an extension of the Fast Gradient Sign
-Method. Rather than generating the adversarial sample in one step, BIM
-applies adversarial noise multiple times with a step size $\alpha$. The benefit
-of iteratively crafting the adversarial sample $x^{\prime}$ is that intermediate
-results can be clipped at each step to ensure that the generated samples are
-within an $\epsilon$ distance to the original input $x$:
+Alexey Kurakin \emph{et al} proposed an extension of the Fast Gradient Sign Method
+\cite{kurakin_adversarial_2017}. Rather than generating the adversarial sample
+in one step, BIM applies adversarial noise multiple times with a step size
+$\alpha$. The benefit of iteratively crafting the adversarial sample
+$x^{\prime}$ is that intermediate results can be clipped at each step to ensure
+that the generated samples are within an $\epsilon$ distance to the original
+input $x$:
 \begin{align} \label{eq:bim}
     x^{\prime}_{n+1}=clip_{x,\epsilon}
     \left\{ x^{\prime}_{n}+\alpha.sign\left(\nabla_{x}J\left(x^{\prime}_{n},y\right)\right)\right\},
@@ -402,14 +408,14 @@ within an $\epsilon$ distance to the original input $x$:
 where $x^{\prime}_{0}=x$.
 
 \paragraph{Carlini \& Wagner (CW).}
-\cite{carlini_towards_2017} proposed a powerful method to
-generate adversarial examples that can defeat the defensive distillation
-approach published by \cite{papernot_distillation_2016}.
-In their paper, the authors construct an attack for: $L_{0}$, $L_{2}$ and
-$L_{\infty}$ distance metrics.
+Nicholas Carlini and David Wagner proposed a powerful method to generate
+adversarial examples \cite{carlini_towards_2017} that can defeat the defensive
+distillation approach published by Nicolas Papernot \emph{et al}
+\cite{papernot_distillation_2016}. In their paper, the authors construct an
+attack for: $L_{0}$, $L_{2}$ and $L_{\infty}$ distance metrics.
 
 In my experiments, I use the attack that seeks low distortion in the $L_{2}$
-distance metric. The final optimisation problem for the CW $L_{2}$ attack can be
+distance metric. The final optimization problem for the CW $L_{2}$ attack can be
 defined as
 \begin{align} \label{eq:cw_min}
     \min{\lVert x^{\prime}-x\lVert_{2}^{2}+c\cdot\ell(x^{\prime})},
@@ -428,15 +434,25 @@ examples with a small perturbation size. However, this method is computationally
 expensive to run.
 
 \paragraph{Decoupled Direction and Norm (DDN).}
-Jérôme \emph{et al} \cite{rony_decoupling_2019} proposed an improvement over the
-CW method. The DDN method can obtain comparable results in terms of perturbation
-size but with considerably fewer iterations. At each iteration $k$, refine noise
-$\beta_{k}$ by considering a larger norm $\epsilon_{k+1}=(1+\gamma)\epsilon_{k}$
-or smaller norm $\epsilon_{k+1}=(1-\gamma)\epsilon_{k}$ depending on if
-$x+\beta_{k}$ is adversarial or not. Finally, the method returns the clipped
-adversarial sample that has the lowest $L_{2}$-norm.
+Jérôme Rony \emph{et al} proposed an improvement over the CW method
+\cite{rony_decoupling_2019}. The DDN method can obtain comparable results in
+terms of perturbation size but with considerably fewer iterations. At each
+iteration $k$, refine noise $\beta_{k}$ by considering a larger norm
+$\epsilon_{k+1}=(1+\gamma)\epsilon_{k}$ or smaller norm
+$\epsilon_{k+1}=(1-\gamma)\epsilon_{k}$ depending on if $x+\beta_{k}$ is
+adversarial or not. Finally, the method returns the clipped adversarial sample
+that has the lowest $L_{2}$-norm.
 
-\begin{figure}[ht]
+Figure \ref{fig:samples_ae} shows three samples generated using the basic
+iterative method (B), decoupled direction and norm (D), and the Carlini \&
+Wagner method (F). The model correctly predicts the natural image (A) as an
+image of a church while predicting the generated samples as images of chickens.
+The perturbation size for each sample is: $L_2 \approx 2.00$ for the BIM sample
+(B), $L_2 \approx 1.40$ for the DDN (D) sample and $L_2 \approx 1.37$ for the CW
+sample. As discussed earlier, DDN and CW methods can generate samples with a
+smaller perturbation than methods such as BIM or FGSM.
+
+\begin{figure}[htb]
     \centering
     \begin{tabular}{@{}cc@{}} \multicolumn{2}{c}{
             \includegraphics[width=.25\columnwidth]{Figures/related/attacks/original.png}
@@ -467,32 +483,25 @@ adversarial sample that has the lowest $L_{2}$-norm.
 \end{figure}
 
 \clearpage
-Figure \ref{fig:samples_ae} shows three samples generated using the basic
-iterative method (B), decoupled direction and norm (D), and the Carlini \&
-Wagner method (F). The model correctly predicts the natural image (A) as an
-image of a church while predicting the generated samples as images of chickens.
-The perturbation size for each sample is: $L_2 \approx 2.00$ for the BIM sample
-(B), $L_2 \approx 1.40$ for the DDN (D) sample and $L_2 \approx 1.37$ for the CW
-sample. As discussed earlier, DDN and CW methods can generate samples with a
-smaller perturbation than methods such as BIM or FGSM.
-\clearpage
+
 
 %---------------------------------------------------------------------
 \section{Defending Against Adversarial Examples}
 \label{sec:defending_adgainst_adversarial_examples}
 
-Since \cite{szegedy_intriguing_2014} discovered the existence of adversarial
-examples, much research has been conducted from the perspectives of both the
-attacker, \emph{i.e.,} the party trying to exploit vulnerabilities in a model
-and the defending party trying to mitigate these attacks. The authors also
-hypothesized that adversarial examples exist due to the high non-linearity
-nature of NNs. However, this hypothesis was later rebutted by
-\cite{goodfellow_explaining_2015} when they argued that adversarial examples
-exist due to NNs being too linear rather than the contrary.
+Since Christian Szegedy \emph{et al} \cite{szegedy_intriguing_2014} discovered
+the existence of adversarial examples, much research has been conducted from the
+perspectives of both the attacker, \emph{i.e.,} the party trying to exploit
+vulnerabilities in a model and the defending party trying to mitigate these
+attacks. The authors also hypothesized that adversarial examples exist due to
+the high non-linearity nature of NNs. However, this hypothesis was later
+rebutted by Goodfellow \emph{et al} when they argued that adversarial examples
+exist due to NNs being too linear rather than the contrary
+\cite{goodfellow_explaining_2015}.
 
 The research first focused on defending against adversarial examples by
 improving the robustness of neural networks via, among others, adversarial
-training (\cite{goodfellow_explaining_2015,papernot_limitations_2015}), where
+training \cite{goodfellow_explaining_2015,papernot_limitations_2015}, where
 adversarial examples are included in a dataset alongside natural images in order
 to train a CNN on both natural images and adversarial samples. The computational
 cost required to generate adversarial examples makes this defense approach
@@ -500,25 +509,25 @@ computationally expensive, even when using techniques such as FGSM that require
 \emph{considerably} less computational work than methods such as CW which can
 require hours to generate a single sample on a low-end gpu.
 
-\textit{Defensive distillation} from \cite{papernot_distillation_2016} is
-another technique to improve the robustness of NN and involves the use of two
-networks. A first network $F$ is conventionally trained on inputs $X$ and labels
-$Y$ and outputs a probability vector predictions $F(X)$. The second network
-$F_{d}$ is then trained on the same inputs $X$, but the labels are replaced by
-the output of the first network $F(X)$ as a way of restraining the model from
-over-fitting on the data. Defensive distillation is a very effective defense but
-was defeated by the more recent CW attack.
+\textit{Defensive distillation} \cite{papernot_distillation_2016} is another
+technique to improve the robustness of NN and involves the use of two networks.
+A first network $F$ is conventionally trained on inputs $X$ and labels $Y$ and
+outputs a probability vector predictions $F(X)$. The second network $F_{d}$ is
+then trained on the same inputs $X$, but the labels are replaced by the output
+of the first network $F(X)$ as a way of restraining the model from over-fitting
+on the data. Defensive distillation is a very effective defense but was defeated
+by the more recent CW attack.
 
 Due to the difficulty and computational cost of training robust neural networks
 against adversarial examples, recent research has focused on detecting them
-instead. However, a recent survey by \cite{carlini_adversarial_2017} examined
-ten detection defenses that they all bypassed using their attack method and
+instead. However, a recent survey by N. Carlini and D. Wagner examined ten
+detection defenses that they all bypassed using their attack method and
 concluded that adversarial examples are significantly more complex to detect
-than previously recognized. Furthermore, among the ten detection methods
-surveyed, Carlini \& Wagner concluded that only \textit{bayesian neural network
-    uncertainty}, introduced by Feinman \cite{feinman_detecting_2017}, was effective
-and made generating adversarial examples nearly five times more difficult on the
-dataset CIFAR-10. \cite{feinman_detecting_2017} use dropout from
+than previously recognized \cite{carlini_adversarial_2017}. Furthermore, among
+the ten detection methods surveyed, they concluded that only \textit{bayesian
+neural network uncertainty} \cite{feinman_detecting_2017} was effective and made
+generating adversarial examples nearly five times more difficult on the dataset
+CIFAR-10. For their method, Reuben Feinman \emph{et al} use dropout
 \cite{srivastava_dropout_2014} to induce randomness during inference and predict
 an input multiple times in order to measure the prediction uncertainty. They
 show that the prediction uncertainty is typically higher on adversarial examples
