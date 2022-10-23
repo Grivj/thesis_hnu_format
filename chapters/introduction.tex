@@ -2,7 +2,7 @@
 \label{Introduction}
 
 \section{Motivation}
-\begin{figure}[ht]
+\begin{figure}[!htb]
     \centering
     \subfloat[\centering]{{\includegraphics[width=.33\linewidth]{figures/intro/normal.png}}} %
     \subfloat[\centering]{{\includegraphics[width=.33\linewidth]{figures/intro/ae_diff.png}}} %
@@ -14,6 +14,7 @@
     \label{fig:adversarial_examples}
 \end{figure}
 
+\overridetextsize
 Deep neural networks (DNNs) have succeeded on numerous tasks, from image and
 speech recognition (\cite{russakovsky_imagenet_2015,amodei_deep_2015}) to
 self-driving cars (\cite{bojarski_end_2016}) and beating the world champion at
@@ -26,9 +27,9 @@ demonstrated this phenomenon to be observable in computer vision and speech
 recognition when \cite{carlini_audio_2018} showed that a perturbed audio
 waveform could make a speech-to-text model drastically change the transcription,
 as seen in figure \ref{fig:carlini_audio}.
-\begin{figure}[ht]
+\begin{figure}[!htb]
     \centering
-    \includegraphics[width=.8\linewidth]{Figures/intro/carlini_noise.png}
+    \includegraphics[width=.6\linewidth]{Figures/intro/carlini_noise.png}
     \caption{ Unnoticeable audio waveform added to an audio recording changes
         the transcription by the model drastically, by
         \cite{carlini_audio_2018}.}
@@ -42,16 +43,16 @@ even demonstrated in a recent study that modifying a single pixel from the input
 vector can be enough to fool a neural network, as shown in figure
 \ref{fig:su_one_pixel}.
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
     \centering
-    \includegraphics[width=.8\linewidth]{Figures/intro/su_one_pixel.png}
+    \includegraphics[width=.6\linewidth]{Figures/intro/su_one_pixel.png}
     \caption{ One-pixel attack by \cite{su_one_2019}. Modified pixels are
         circled in red. Original predictions in black and predictions with
         modified pixels in blue.}
     \label{fig:su_one_pixel}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
     \subfloat[]{%
         \includegraphics[clip,width=.33\linewidth]{Figures/fig2/Fig2a.png}%
     } \subfloat[]{%
@@ -82,7 +83,7 @@ and adversarial perturbations motivated me to experiment with the robustness of
 adversarial examples themselves by intentionally adding a random perturbation on
 these modified samples.
 
-
+\clearpage
 \section{Main Contribution}
 I propose a novel method for detecting adversarial examples based on
 intentionally introducing Gaussian noise on the input with varying intensity.
@@ -101,7 +102,6 @@ overall application's performance. The method I propose emerged after studying
 the effects of applying additive Gaussian noise to normal images and adversarial
 examples and observing a disparity that, to the best of my knowledge and at the
 time of this work, has not been discussed in prior work.
-
 
 \section{Thesis Structure}
 The material described in chapter \ref{RelatedWork} first provides a brief

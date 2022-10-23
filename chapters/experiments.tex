@@ -1,30 +1,11 @@
 \chapter{Experiments}
 \label{Experiments}
+\overridetextsize
 
 \section{Overview}
 \label{sec:experiments_overview}
-Adversarial examples can be seen as a worst-case noise that fools the model into
-misclassification when applied to an image. On the other hand, neural networks
-are relatively robust to random corruptions such as Gaussian noise.
 
-My intuition is that applying random noise to an adversarial example could hide
-or alter parts of the adversarial perturbation, thus diminishing or even
-nullifying its effect.
-
-In order to apply a random transformation to an image $x$, we generate a
-Gaussian noise $\tilde{y}=\mathcal{N}(0,1)$ that we add to the image in order to
-create a noisy version $\tilde{x}$:
-\begin{align} \label{eq:noisy_version}
-    \tilde{x}=x+\tilde{y}\kappa,
-\end{align}
-where $\kappa$, is the standard deviation used to scale down or up the noise
-intensity.
-
-Fig \ref{fig:noise_increase} shows the impact of increasing $\kappa$ on an image
-and shows the corresponding $L_2$ distance and peak signal-to-noise ratio (PSNR)
-of the noise mask.
-
-\begin{figure}[ht]
+\begin{figure}[!t]
     \subfloat[]{%
         \includegraphics[clip,width=.33\linewidth]{Figures/noise/std:0.0,l2:
             0.0,PSNR:100.0.png}%
@@ -52,7 +33,28 @@ of the noise mask.
     \label{fig:noise_increase}
 \end{figure}
 
-\begin{table}[h!]
+Adversarial examples can be seen as a worst-case noise that fools the model into
+misclassification when applied to an image. On the other hand, neural networks
+are relatively robust to random corruptions such as Gaussian noise.
+
+My intuition is that applying random noise to an adversarial example could hide
+or alter parts of the adversarial perturbation, thus diminishing or even
+nullifying its effect.
+
+In order to apply a random transformation to an image $x$, we generate a
+Gaussian noise $\tilde{y}=\mathcal{N}(0,1)$ that we add to the image in order to
+create a noisy version $\tilde{x}$:
+\begin{align} \label{eq:noisy_version}
+    \tilde{x}=x+\tilde{y}\kappa,
+\end{align}
+where $\kappa$, is the standard deviation used to scale down or up the noise
+intensity.
+
+Fig \ref{fig:noise_increase} shows the impact of increasing $\kappa$ on an image
+and shows the corresponding $L_2$ distance and peak signal-to-noise ratio (PSNR)
+of the noise mask.
+
+\begin{table}[!htb]
     \centering
     \begin{tabular}{|c c c c|}
         \hline
@@ -76,6 +78,7 @@ To further motivate and formulate the proposed method discussed in section
 remainder of this section to verify that the intuition mentioned above holds
 correct.
 
+\clearpage
 \section{Experimental Settings}
 Below I describe the datasets and models used, as well as the settings used to
 configure the attack methods.

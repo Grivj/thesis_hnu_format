@@ -1,11 +1,19 @@
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[doctor]{hnuthesis}
+\documentclass{hnuthesis}
+
 % \usepackage{subfigure}
 \usepackage{amsmath}
 \usepackage{algorithmicx,algpseudocode}
 \usepackage{float}
 \usepackage{siunitx,amsmath,mathpazo,caption,subfig,multirow,makecell,booktabs,rotating,adjustbox}
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
 
 % 学校代码
 \hnucode{10532}
@@ -21,8 +29,8 @@
 \title{使用随机像素空间扰动的对抗样本检测}
 \entitle{Adversarial Examples Detection Using Random Pixel-Space Perturbation}
 % 作者
-\author{GRIVEAU Jordan}
-\enauthor{GRIVEAU Jordan}
+\author{Griveau Jordan}
+\enauthor{Griveau Jordan}
 % 学号
 \authorid{LY2019093}
 % 学院
@@ -39,7 +47,7 @@
 \ensupervisor{Professor JIANG Bin}
 % 论文提交、答辩日期
 \submitdate{2022年3月27日}
-\defensedate{xxxx年x月xx日}
+\defensedate{2022年--月--日}
 \endate{March, 2022}
 % 答辩委员会主席
 \chair{待定}
@@ -47,6 +55,15 @@
 \begin{document}
 % 封面、原创性声明
 \maketitle
+
+
+\vspace*{0.2\textheight}
+
+{\itshape Live as if you were to die tomorrow. Learn as if you
+    were to live forever.}\bigbreak
+
+\hfill Mahatma Gandhi
+\afterpage{\blankpage}
 
 % 摘要
 \input{chapters/abstract}

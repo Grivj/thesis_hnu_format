@@ -1,5 +1,6 @@
 \chapter{Discussion}
 \label{discussion}
+\overridetextsize
 
 \section{Low Resolution Images}
 
@@ -32,8 +33,29 @@ Thus, it is highly challenging to generate adversarial examples that generalize
 and keep their effect under all these \emph{unknown} and \emph{random}
 parameters.
 
+\clearpage
 \section{Future Work}
 
+\begin{figure}[!t]
+    \subfloat[]{%
+        \includegraphics[clip,width=.5\linewidth]{Figures/peaks/1.png}%
+    }
+    \subfloat[]{%
+        \includegraphics[clip,width=.5\linewidth]{Figures/peaks/3.png}%
+    }
+
+    \subfloat[]{%
+        \includegraphics[clip,width=.5\linewidth]{Figures/peaks/13.png}%
+    }
+    \subfloat[]{%
+        \includegraphics[clip,width=.5\linewidth]{Figures/peaks/20.png}%
+    }
+
+    \caption{Peaks observed on normal and adversarial images. Peaks on
+        adversarial examples appear to happen at a sooner noise intensity and
+        reach a higher value.}
+    \label{fig:peaks}
+\end{figure}
 During my experiments, I wanted to explore different ways of detecting scores
 anomalies. One of the ways I briefly experimented with was to plot the scores
 differences at each noise intensity step. For example, given ten $\kappa$, I
@@ -54,19 +76,6 @@ observation could be used to detect adversarial examples, \emph{e.g.,} by
 comparing the intensity of the peaks and when they occur, \emph{i.e.,} when the
 first-order difference peaks at an earlier $\kappa$, and at a high magnitude,
 this could indicate the adversarial nature of the input.
-
-\begin{table}\centering
-    \begin{tabular}{cc}
-        \includegraphics[width=.45\linewidth]{Figures/peaks/1.png}  &
-        \includegraphics[width=.45\linewidth]{Figures/peaks/3.png}    \\
-        \includegraphics[width=.45\linewidth]{Figures/peaks/13.png} &
-        \includegraphics[width=.45\linewidth]{Figures/peaks/20.png}   \\
-    \end{tabular}
-    \caption{Peaks observed on normal and adversarial images. Peaks on
-        adversarial examples appear to happen at a sooner noise intensity and
-        reach a higher value.}
-    \label{fig:peaks}
-\end{table}
 
 Furthermore, for future research, I believe the detection performances of my
 method could be improved by adding Gaussian noise as a form of data augmentation
