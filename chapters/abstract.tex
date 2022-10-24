@@ -25,20 +25,29 @@
 \begin{enabstract}
 	\large
 	Like other machine learning algorithms, neural networks have been vulnerable
-	to adversarial examples, \emph{i.e.}, inputs containing specifically crafted
+	to adversarial examples, i.e., inputs containing specifically crafted
 	perturbations whose only objective is to fool a network into
-	misclassification. On the other hand, because of the improvements made on
-	neural network architectures, they are known to be much more robust to
-	random perturbations in the input. This robustness to random perturbations
-	motivated me to propose an easy-to-deploy adversarial example detection
-	method that measures prediction inconsistencies before and after applying
-	random noise to an input image. Evaluating the method on subsets of three
-	popular benchmarks (Dogs vs. Cats, CIFAR-10, and ImageNet) shows that it
-	achieves high adversarial example detection performance for various attacks
-	on higher resolution images. The main advantages of my approach are its
-	simplicity, low computational cost, and the fact that it does not require
-	any prior knowledge of the attack used, which makes it easy to integrate my
-	method into other defense frameworks.
+	misclassification. On the other hand, thanks to the continuous research and
+	improvements made to neural network architectures, recent models are much
+	more robust to random perturbations in the input. This robustness to random
+	perturbations motivated the study of the effect of pixel-space perturbations
+	on typical images (i.e., benign) and adversarial examples with varying
+	intensities of noise and adversarial perturbation.
+
+	These experiments, followed by the results described in this research, led
+	me to propose a novel method to detect adversarial examples. The essence of
+	the method is to deliberately introduce Gaussian noise of varying strengths
+	on the input images to compute two metrics that evaluate the differences in
+	predictions ante and post the added perturbations. Differences that I prove
+	to be typically much higher with adversarial examples than with standard
+	images using three popular benchmarks (Dogs vs. Cats, CIFAR-10, and
+	ImageNet).
+
+	The main advantages of my approach are its simplicity and low computational
+	cost, making it easy to deploy and combine with other defense frameworks.
+	Most importantly, the method shows high detection performance on various
+	attacks on higher-resolution images regardless of any prior knowledge of the
+	attack or its adversarial budget.
 	\enkeywords{Deep Learning; Computer Vision; Adversarial Examples}
 \end{enabstract}
 \afterpage{\blankpage}
