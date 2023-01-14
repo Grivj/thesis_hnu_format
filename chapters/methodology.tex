@@ -51,7 +51,7 @@ The second score similarly compares two sets of predictions by computing the
 $L_1$-norm, or Manhattan distance, as follows:
 \begin{align}
     \label{eq:score2}
-    score_{2}{(x,\tilde{x})}=\|F(x)-F(\tilde{x})\|_{1}.
+    score_{2}{(x,\tilde{x})}=||F(x)-F(\tilde{x})||_{1}.
 \end{align}
 
 Notably, $score_{1}$ uses the model's raw output, \emph{i.e.,} logits, whereas
