@@ -107,7 +107,7 @@
 \hnu@define@term{endate}
 
 \if@hnu@doctor
-  \newcommand\hnu@thesisname{硕士学位论文}%
+  \newcommand\hnu@thesisname{Master's thesis}%
 \fi
 
 % 表格：
@@ -157,7 +157,7 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \fancypagestyle{hnu@headings}{%
   \fancyhf{}%
-  \fancyhead[CE]{\setfontsize{9pt}\hnu@title}%
+  \fancyhead[CE]{\setfontsize{9pt}\hnu@entitle}%
   \fancyhead[CO]{\setfontsize{9pt}\hnu@thesisname}
   \fancyfoot[C]{\setfontsize{9pt}\thepage}
   \fancyheadoffset[LO,LE]{3mm}
