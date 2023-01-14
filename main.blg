@@ -14,45 +14,45 @@ Warning--empty journal in simonyan_very_2015-2
 Warning--empty journal in zheng_improving_2016
 
 Done.
-You've used 36 entries,
+You've used 35 entries,
             2530 wiz_defined-function locations,
-            773 strings with 13710 characters,
-and the built_in function-call counts, 7891 in all, are:
-= -- 693
-> -- 493
+            767 strings with 13245 characters,
+and the built_in function-call counts, 7665 in all, are:
+= -- 673
+> -- 476
 < -- 4
-+ -- 230
-- -- 115
-* -- 414
-:= -- 1251
-add.period$ -- 102
-call.type$ -- 36
-change.case$ -- 3
++ -- 222
+- -- 111
+* -- 404
+:= -- 1214
+add.period$ -- 98
+call.type$ -- 35
+change.case$ -- 2
 chr.to.int$ -- 0
-cite$ -- 42
-duplicate$ -- 343
-empty$ -- 682
-format.name$ -- 148
-if$ -- 1788
+cite$ -- 41
+duplicate$ -- 332
+empty$ -- 666
+format.name$ -- 143
+if$ -- 1738
 int.to.chr$ -- 0
-int.to.str$ -- 36
-missing$ -- 39
-newline$ -- 186
-num.names$ -- 36
-pop$ -- 165
+int.to.str$ -- 35
+missing$ -- 37
+newline$ -- 180
+num.names$ -- 35
+pop$ -- 162
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 304
+skip$ -- 295
 stack$ -- 0
-substring$ -- 251
-swap$ -- 42
+substring$ -- 249
+swap$ -- 40
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 5
 type$ -- 0
 warning$ -- 6
-while$ -- 57
-width$ -- 38
-write$ -- 375
+while$ -- 56
+width$ -- 37
+write$ -- 362
 (There were 6 warnings)

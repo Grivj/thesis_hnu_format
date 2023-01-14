@@ -1,8 +1,8 @@
 \contentsline {chapter}{学位论文原创性声明和学位论文版权使用授权书}{I}{Doc-Start}%
 \contentsline {chapter}{摘\hskip 1em\relax 要}{II}{chapter*.1}%
-\contentsline {chapter}{Abstract}{III}{chapter*.2}%
-\contentsline {chapter}{插图索引}{VI}{chapter*.4}%
-\contentsline {chapter}{附表索引}{IX}{chapter*.5}%
+\contentsline {chapter}{Abstract}{IV}{chapter*.2}%
+\contentsline {chapter}{插图索引}{VII}{chapter*.4}%
+\contentsline {chapter}{附表索引}{X}{chapter*.5}%
 \contentsline {chapter}{\numberline {第1章\hspace {.3em}}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Main Contribution}{4}{section.1.2}%
@@ -28,16 +28,16 @@
 \contentsline {subsection}{\numberline {3.3.2}Logits differences}{28}{subsection.3.3.2}%
 \contentsline {chapter}{\numberline {第4章\hspace {.3em}}Methodology}{31}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Scores}{32}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Method-Specific Approach}{36}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Method-Agnostic Approach}{37}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Selection Of The Noise Intensity}{37}{subsection.4.3.1}%
-\contentsline {section}{\numberline {4.4}Detection Results}{40}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Showcasing With One Sample}{43}{subsection.4.4.1}%
-\contentsline {chapter}{\numberline {第5章\hspace {.3em}}Discussion}{45}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Low Resolution Images}{45}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Adaptive Adversaries}{45}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Future Work}{46}{section.5.3}%
-\contentsline {chapter}{总结与展望}{48}{chapter*.35}%
-\contentsline {chapter}{参考文献}{49}{chapter*.36}%
-\contentsline {chapter}{致\hskip 1em\relax 谢}{52}{chapter*.37}%
+\contentsline {section}{\numberline {4.2}Method-Specific Approach}{35}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Method-Agnostic Approach}{36}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Selection Of The Noise Intensity}{36}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}Detection Results}{39}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Showcasing With One Sample}{42}{subsection.4.4.1}%
+\contentsline {chapter}{\numberline {第5章\hspace {.3em}}Discussion}{44}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Low Resolution Images}{44}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Adaptive Adversaries}{44}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Future Work}{45}{section.5.3}%
+\contentsline {chapter}{总结与展望}{47}{chapter*.35}%
+\contentsline {chapter}{参考文献}{48}{chapter*.36}%
+\contentsline {chapter}{致\hskip 1em\relax 谢}{51}{chapter*.37}%
 \contentsfinish 

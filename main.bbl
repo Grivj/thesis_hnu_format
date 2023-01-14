@@ -1,27 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{carlini_audio_2018}
-Carlini N, Wagner D.
-\newblock Audio {Adversarial} {Examples}: {Targeted} {Attacks} on
-  {Speech}-to-{Text}.
-\newblock arXiv:1801.01944 [cs], 2018.
-
-\bibitem{su_one_2019}
-Su J, Vargas D~V, Kouichi S.
-\newblock One pixel attack for fooling deep neural networks.
-\newblock IEEE Transactions on Evolutionary Computation, 2019, 23(5):828--841
-
-\bibitem{krizhevsky_imagenet_2017-1}
-Krizhevsky A, Sutskever I, Hinton G~E.
-\newblock {ImageNet} classification with deep convolutional neural networks.
-\newblock Communications of the ACM, 2017, 60(6):84--90
-
-\bibitem{zeiler_visualizing_2013}
-Zeiler M~D, Fergus R.
-\newblock Visualizing and {Understanding} {Convolutional} {Networks}.
-\newblock arXiv:1311.2901 [cs], 2013.
-\newblock ArXiv: 1311.2901
-
 \bibitem{russakovsky_imagenet_2015}
 Russakovsky O, Deng J, Su H, et~al.
 \newblock {ImageNet} {Large} {Scale} {Visual} {Recognition} {Challenge}.
@@ -48,6 +26,17 @@ Silver D, Huang A, Maddison C~J, et~al.
 Szegedy C, Zaremba W, Sutskever I, et~al.
 \newblock Intriguing properties of neural networks.
 \newblock arXiv:1312.6199 [cs], 2014.
+
+\bibitem{carlini_audio_2018}
+Carlini N, Wagner D.
+\newblock Audio {Adversarial} {Examples}: {Targeted} {Attacks} on
+  {Speech}-to-{Text}.
+\newblock arXiv:1801.01944 [cs], 2018.
+
+\bibitem{su_one_2019}
+Su J, Vargas D~V, Kouichi S.
+\newblock One pixel attack for fooling deep neural networks.
+\newblock IEEE Transactions on Evolutionary Computation, 2019, 23(5):828--841
 
 \bibitem{he_deep_2015}
 He K, Zhang X, Ren S, et~al.
@@ -104,6 +93,17 @@ LeCun Y, Haffner P, Bottou L, et~al.
 \newblock In: Forsyth D~A, Mundy J~L, diGesú V, et~al, (eds.). Proc of Shape,
   {Contour} and {Grouping} in {Computer} {Vision}, Lecture {Notes} in
   {Computer} {Science}. Berlin, Heidelberg: Springer, 1999: 319--345
+
+\bibitem{krizhevsky_imagenet_2017-1}
+Krizhevsky A, Sutskever I, Hinton G~E.
+\newblock {ImageNet} classification with deep convolutional neural networks.
+\newblock Communications of the ACM, 2017, 60(6):84--90
+
+\bibitem{zeiler_visualizing_2013}
+Zeiler M~D, Fergus R.
+\newblock Visualizing and {Understanding} {Convolutional} {Networks}.
+\newblock arXiv:1311.2901 [cs], 2013.
+\newblock ArXiv: 1311.2901
 
 \bibitem{noauthor_model_2020}
 Model {Hacking} {ADAS} to {Pave} {Safer} {Roads} for {Autonomous} {Vehicles},
@@ -183,13 +183,6 @@ Rauber J, Zimmermann R, Bethge M, et~al.
 \newblock Foolbox {Native}: {Fast} adversarial attacks to benchmark the
   robustness of machine learning models in {PyTorch}, {TensorFlow}, and {JAX}.
 \newblock Journal of Open Source Software, 2020, 5(53):2607
-
-\bibitem{buitinck_api_2013}
-Buitinck L, Louppe G, Blondel M, et~al.
-\newblock {API} design for machine learning software: experiences from the
-  scikit-learn project.
-\newblock arXiv:1309.0238 [cs], 2013.
-\newblock ArXiv: 1309.0238
 
 \bibitem{xu_feature_2018}
 Xu W, Evans D, Qi Y.
