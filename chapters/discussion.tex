@@ -2,7 +2,7 @@
 \label{discussion}
 \overridetextsize
 
-\section{Low Resolution Images}
+\section{Addressing Low-Resolution Images}
 
 One possible reason for the inferior detection performance on CIFAR-10 compared
 to higher resolution datasets like ImageNet or Dogs vs. Cats, as shown in table
@@ -32,7 +32,7 @@ data can be used to reduce overfitting or stabilize the models. Combined with
 the proposed method, it could improve the model's robustness to noise and reduce
 the number of false positives.
 
-\section{Adaptive Adversaries}
+\section{Adapting to Adaptive Adversaries}
 
 In the experiments presented, I assumed that the adversaries had full knowledge
 of the model's parameters but did not attempt to adapt their methods to bypass
@@ -61,9 +61,22 @@ tool for detecting adversarial examples.
 
 
 \clearpage
-\section{Future Work}
+\section{Potential Improvements and Next Steps}
 
-\begin{figure}[!t]
+\subsection{Peak Detection Analysis}
+During my experiments, I wanted to explore different ways of detecting scores
+anomalies. One of the ways I briefly experimented with was to plot the scores
+differences at each noise intensity step. For example, given ten $\kappa$, I
+computed the first-order difference like so:
+
+\begin{align}
+    \label{eq:first-order-diff}
+    out_i= \lvert \alpha_{i+1} - \alpha_{i} \rvert,
+\end{align}
+where $\alpha_i$ represents the score result (either $score_1$ or $score_2$ seen
+in \ref{eq:score1} and \ref{eq:score2}) at $\kappa_i$ noise intensity.
+
+\begin{figure}[htp]
     \subfloat[]{%
         \includegraphics[clip,width=.5\linewidth]{Figures/peaks/1.png}%
     }
@@ -83,17 +96,6 @@ tool for detecting adversarial examples.
         reach a higher value.}
     \label{fig:peaks}
 \end{figure}
-During my experiments, I wanted to explore different ways of detecting scores
-anomalies. One of the ways I briefly experimented with was to plot the scores
-differences at each noise intensity step. For example, given ten $\kappa$, I
-computed the first-order difference like so:
-
-\begin{align}
-    \label{eq:first-order-diff}
-    out_i= \lvert \alpha_{i+1} - \alpha_{i} \rvert,
-\end{align}
-where $\alpha_i$ represents the score result (either $score_1$ or $score_2$ seen
-in \ref{eq:score1} and \ref{eq:score2}) at $\kappa_i$ noise intensity.
 
 Figure \ref{fig:peaks} shows the plot of these score differences for four random
 images and four adversarial examples generated with different methods. We
@@ -104,23 +106,28 @@ comparing the intensity of the peaks and when they occur, \emph{i.e.,} when the
 first-order difference peaks at an earlier $\kappa$, and at a high magnitude,
 this could indicate the adversarial nature of the input.
 
-Furthermore, for future research, I believe that the detection performance of my
-method can be further improved by incorporating more advanced techniques, such
-as data augmentation with Gaussian noise during the training phase. This
-technique has been shown to be effective in reducing overfitting and stabilizing
-models in prior studies, such as the work done by Zheng et al.
-\cite{zheng_improving_2016} and Connor et al.
-\cite{connor_survey_augmentation_2019}. Additionally, by incorporating this
-technique in combination with my proposed method, the model's robustness to
-noise can be further enhanced, potentially reducing the number of false
-positives, particularly in cases where the images are of lower resolution, such
-as those in the CIFAR-10 dataset. Furthermore, it would be interesting to
-explore other types of noise, such as salt and pepper or Poisson noise, and
-compare the results. Another line of research could be to test the method's
-robustness against adaptive adversaries capable of adapting their methods to
-bypass the detection. Additionally, it would be interesting to extend the method
-to other types of neural networks, such as Recurrent Neural Networks (RNNs) or
-Generative Adversarial Networks (GANs), and analyze the results. Overall, the
-proposed method provides a promising approach for detecting adversarial examples
-and the results suggest that it has the potential to be further improved and
-applied to a wide range of tasks and neural network architectures.
+\subsection{Enhancing Detection Performance with Data Augmentation and Other Techniques}
+
+In this subsection, we explore potential avenues for future research to improve
+the detection performance of the proposed method. One promising direction is
+incorporating more advanced techniques, such as data augmentation with Gaussian
+noise during the training phase. This technique has been shown to be effective
+in reducing overfitting and stabilizing models in prior studies, such as the
+work done by Zheng et al. \cite{zheng_improving_2016} and Connor et al.
+\cite{connor_survey_augmentation_2019}. Furthermore, by incorporating data
+augmentation with Gaussian noise, the model's robustness to noise can be further
+enhanced, potentially reducing the number of false positives, particularly in
+cases where the images are of lower resolution, such as those in the CIFAR-10
+dataset. Another interesting area of research is to explore other types of
+noise, such as salt and pepper or Poisson noise, and compare the results. This
+can help further understand the impact of different types of noise on the
+detection performance of the proposed method. Furthermore, it would be
+interesting to test the method's robustness against adaptive adversaries capable
+of adapting their methods to bypass the detection. This will help to evaluate
+the proposed method's ability to detect adversarial examples generated by
+adaptive attackers.
+
+Overall, the proposed method provides a promising approach for detecting
+adversarial examples, and the results suggest that it has the potential to be
+further improved and applied to a wide range of tasks and neural network
+architectures.
