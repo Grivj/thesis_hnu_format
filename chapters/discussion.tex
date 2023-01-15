@@ -34,18 +34,31 @@ the number of false positives.
 
 \section{Adaptive Adversaries}
 
-In all the experiments I presented, I considered adversaries who have full
-access to the model parameters but do not adapt to bypass the detection method.
-To do so, an adversary would need to produce examples such that both scores
-remain under unknown thresholds, which is a considerably more challenging
-problem than simply crafting adversarial examples. More challenging, primarily
-because of the random nature of the technique, it would be extremely difficult
-and time-consuming to generate adversarial examples that keep their adversarial
-effects at varying unknown-to-the-adversary noise amounts.
+In the experiments presented, I assumed that the adversaries had full knowledge
+of the model's parameters but did not attempt to adapt their methods to bypass
+the detection. However, if an adversary were to try and bypass the detection
+method, they would face a significant challenge as they would need to produce
+examples that keep both scores under unknown thresholds, which is considerably
+more complex than simply crafting adversarial examples. Additionally, the
+proposed method's random nature makes it difficult for adversaries to adapt
+their attack and generate examples that maintain their adversarial effects
+across varying unknown noise amounts. This makes it highly challenging for
+adversaries to produce adversarial examples that generalize and maintain their
+effectiveness under the proposed method's unknown and random parameters.
 
-Thus, it is highly challenging to generate adversarial examples that generalize
-and keep their effect under all these \emph{unknown} and \emph{random}
-parameters.
+Furthermore, the proposed method's use of two scores for detection also makes it
+difficult for an adversary to bypass the detection. By using two scores, the
+proposed method creates a two-fold defense against adversarial examples, making
+it more difficult for an adversary to find a way to bypass the detection. Using
+two scores also allows for detecting a broader range of adversarial examples,
+including those that may have been missed by using a single score.
+
+In conclusion, the proposed method's use of random noise and two scores for
+detection makes it difficult for adversaries to adapt their methods to bypass
+the detection. The proposed method's randomness, unpredictability, and ability
+to be easily combined with other existing defense methods make it a powerful
+tool for detecting adversarial examples.
+
 
 \clearpage
 \section{Future Work}
@@ -91,12 +104,23 @@ comparing the intensity of the peaks and when they occur, \emph{i.e.,} when the
 first-order difference peaks at an earlier $\kappa$, and at a high magnitude,
 this could indicate the adversarial nature of the input.
 
-Furthermore, for future research, I believe the detection performances of my
-method could be improved by adding Gaussian noise as a form of data augmentation
-during the training phase. Adding noise to the training data has been done
-before to reduce overfitting or stabilize the models
-\cite{zheng_improving_2016}. However, in combination with my method, I believe
-that training the model with randomly modified inputs would improve the model's
-robustness to noise and, thus, hypothetically reduce the number of false
-positives, especially on lower resolution images like CIFAR-10, which increases
-detection precision.
+Furthermore, for future research, I believe that the detection performance of my
+method can be further improved by incorporating more advanced techniques, such
+as data augmentation with Gaussian noise during the training phase. This
+technique has been shown to be effective in reducing overfitting and stabilizing
+models in prior studies, such as the work done by Zheng et al.
+\cite{zheng_improving_2016} and Connor et al.
+\cite{connor_survey_augmentation_2019}. Additionally, by incorporating this
+technique in combination with my proposed method, the model's robustness to
+noise can be further enhanced, potentially reducing the number of false
+positives, particularly in cases where the images are of lower resolution, such
+as those in the CIFAR-10 dataset. Furthermore, it would be interesting to
+explore other types of noise, such as salt and pepper or Poisson noise, and
+compare the results. Another line of research could be to test the method's
+robustness against adaptive adversaries capable of adapting their methods to
+bypass the detection. Additionally, it would be interesting to extend the method
+to other types of neural networks, such as Recurrent Neural Networks (RNNs) or
+Generative Adversarial Networks (GANs), and analyze the results. Overall, the
+proposed method provides a promising approach for detecting adversarial examples
+and the results suggest that it has the potential to be further improved and
+applied to a wide range of tasks and neural network architectures.
