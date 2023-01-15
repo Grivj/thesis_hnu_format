@@ -1,7 +1,7 @@
 \chapter{Related Work}
 \label{RelatedWork}
-\section{Neural Networks}
-\label{neural_networks}
+\section{A Brief History of Neural Networks}
+\label{history_of_neural_networks}
 
 \overridetextsize
 Artificial Intelligence (A.I.), Deep Learning, and Machine Learning have become
@@ -44,9 +44,9 @@ M. Minsky published a book that laid out problems with neural networks
 \cite{minsky_perceptrons_1969}, notably with their conclusion on the perceptron
 proposed by Rosenblatt, stating that this approach could not be translated into
 multi-layered neural networks, as the computational cost to evaluate each
-layers' neurons would be astronomic. This book, among others, started the era of
-"A.I. winter," a period of reduced funding and interest in artificial
-intelligence research.
+layers' neurons would be astronomic. This book, among others, such as
+\cite{haykin_neural_1994} started the era of "A.I. winter," a period of reduced
+funding and interest in artificial intelligence research.
 
 The interest and enthusiasm for neural networks rallied in the nineties with the
 rediscoveries of the components that now form the pillar of today's neural
@@ -225,7 +225,7 @@ network output vector containing \textit{logits}, \emph{i.e.,} raw values before
 the activation function. Finally, the classifier function that returns the most
 likely class label can be written as $C(x)=\textup{argmax}_{i}{(F(x)_{i})}$.
 
-\section{Convolutional Neural Networks}
+\section{Convolutional Neural Networks: A Closer Look}
 \label{CNNs}
 % https://paperswithcode.com/methods/category/convolutional-neural-networks
 
@@ -237,7 +237,7 @@ likely class label can be written as $C(x)=\textup{argmax}_{i}{(F(x)_{i})}$.
 
 Convolutional neural networks (CNNs) \cite{lecun_object_1999}, similarly to the
 neural network architectures discussed in the previous section
-\ref{neural_networks} are a class of artificial neural networks. CNNs are
+\ref{history_of_neural_networks} are a class of artificial neural networks. CNNs are
 commonly used in computer vision to extract features from images or videos and
 have been shown to work exceptionally well for this type of data. They are
 similarly composed of layers of neurons with learnable parameters, \emph{i.e.,}
@@ -285,11 +285,11 @@ This architecture comports:
           the representation, to reduce the number of parameters, thus reducing
           the computation cost of the model.
     \item Fully connected layers: as seen in the previous section
-          \ref{neural_networks}. Since neurons from convolutional layers are
-          multidimensional, their results need to be flattened before being fed
-          into fully-connected layers. This last layer, similarly to ANNs seen
-          previously, will output a probability vector containing the score for
-          each class.
+          \ref{history_of_neural_networks}. Since neurons from convolutional
+          layers are multidimensional, their results need to be flattened before
+          being fed into fully-connected layers. This last layer, similarly to
+          ANNs seen previously, will output a probability vector containing the
+          score for each class.
 \end{itemize}
 
 
@@ -310,7 +310,7 @@ traditional ANNs.
 In this work, since the entirety of my research is conducted on images,
 convolutional neural networks are the only type of architecture that I consider.
 
-\section{Adversarial Examples}
+\section{Adversarial Examples: A Threat to Neural Networks}
 \label{Adversarial_examples}
 
 As seen with figure \ref{fig:adversarial_examples}, adversarial examples are
@@ -347,9 +347,6 @@ road sign (A) as well as two of the physical adversarial examples they created
 wrongly identified as a 45-mph sign with 99.88\% confidence, and (C) is also
 wrongly identified, but as an 85-mph sign! In this context, it is easy to
 imagine why and how this can be a problem that needs to be addressed.
-
-
-
 
 With the ever-growing research on the vulnerability of NNs, there are now many
 different methods to generate adversarial examples. The common objective of such
@@ -486,7 +483,7 @@ smaller perturbation than methods such as BIM or FGSM.
 
 
 %---------------------------------------------------------------------
-\section{Defending Against Adversarial Examples}
+\section{Defending Against Adversarial Examples: Challenges and Approaches}
 \label{sec:defending_adgainst_adversarial_examples}
 
 Since Christian Szegedy \emph{et al} \cite{szegedy_intriguing_2014} discovered
@@ -525,7 +522,7 @@ detection defenses that they all bypassed using their attack method and
 concluded that adversarial examples are significantly more complex to detect
 than previously recognized \cite{carlini_adversarial_2017}. Furthermore, among
 the ten detection methods surveyed, they concluded that only \textit{bayesian
-neural network uncertainty} \cite{feinman_detecting_2017} was effective and made
+    neural network uncertainty} \cite{feinman_detecting_2017} was effective and made
 generating adversarial examples nearly five times more difficult on the dataset
 CIFAR-10. For their method, Reuben Feinman \emph{et al} use dropout
 \cite{srivastava_dropout_2014} to induce randomness during inference and predict
@@ -533,7 +530,7 @@ an input multiple times in order to measure the prediction uncertainty. They
 show that the prediction uncertainty is typically higher on adversarial examples
 compared to normal and noisy images.
 
-\section{Detection Evaluation Metrics}
+\section{Evaluating Detection Performance: Metrics and Measures}
 To attest to the effectiveness of the detection performances of the method
 proposed in a later section, I adopt the recall and precision rates defined as
 \begin{align} \label{eq:recall}
