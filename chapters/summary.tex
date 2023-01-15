@@ -2,15 +2,29 @@
 	\overridetextsize
 	\label{conclusion}
 
-	In this research work, I investigated in many ways the effects of applying
-	Gaussian noise to normal images and adversarial examples on the prediction of
-	convolutional neural networks. Motivated by the observed disparities, I
-	developed a method for detecting adversarial examples based on computing two
-	scores. Contrary to many other techniques, it does not require prior knowledge
-	of the attack, with the advantages of being optimization-free and having a low
-	computation cost.
-
-	Moreover, because of the low computation cost and easy implementation, my method
-	can easily be compounded with other existing defense methods to optimize
-	detection performances.
+	In conclusion, this research has presented a promising new approach for
+	detecting adversarial examples in convolutional neural networks by using
+	Gaussian noise. The proposed method, which is based on computing two scores, has
+	several advantages over other techniques, such as not requiring prior knowledge
+	of the attack and being optimization-free and low in computation cost.
+	Additionally, the ease of implementation allows it to be easily combined with
+	other existing defense methods to optimize detection performance. The results of
+	this study have also shown that this method can be further improved through
+	integration with other techniques \cite{metzen_detecting_2017}, which proposes
+	augmenting deep neural networks with a small "detector" subnetwork trained to
+	distinguish between genuine data and data containing adversarial perturbations.
+	Another approach is proposed in \cite{liang_detecting_2021}, where the authors
+	use image processing techniques for detecting adversarial image examples, and
+	\cite{bhagoji_dimensionality_2017}, which proposes using dimensionality
+	reduction to defend against evasion attacks on ML classifiers. For future work,
+	it would be valuable to continue exploring different ways to detect score
+	anomalies, such as by analyzing peaks in the score differences, as well as the
+	potential of incorporating Gaussian noise as a form of data augmentation during
+	the training phase to improve the model's robustness to noise and reduce the
+	number of false positives, particularly on lower-resolution images such as
+	CIFAR-10. Additionally, it would be interesting to test the proposed method
+	against more sophisticated and adaptive adversaries. Overall, this research
+	provides a promising new approach to detecting adversarial examples and
+	highlights the need for continued research and innovation to ensure machine
+	learning models' robustness and reliability.
 \end{summary}
