@@ -1,8 +1,8 @@
-\chapter{Methodology}
+\chapter{Proposed Methodology}
 \label{Methodology}
 \overridetextsize
 
-
+\section{Noise-Aided Adversarial Example Detection (NAED) Method}
 As observed during the experiments conducted in section \ref{sub:consistency}
 and section \ref{sub:logits_differences}, the usage of Gaussian noise to alter
 the efficacy of the perturbations present in adversarial examples is effective.
@@ -16,13 +16,14 @@ From the two scores computed for each input, we can determine if an input is
 adversarial or not.
 
 \begin{figure}[htp]
-    \includegraphics[clip,width=\columnwidth]{Figures/methodology/Framework.pdf}%
+    \centering
+    \includegraphics[clip,width=0.9\columnwidth]{Figures/methodology/Framework.pdf}%
 
     \caption{The framework of the discussed method.}
     \label{fig:framework}
 \end{figure}
 
-\section{Scores}
+\section{Predictions Differences: Two scores}
 \label{sub:detection_metrics}
 As observed in section \ref{sub:logits_differences}, the model predictions
 differ to a more significant degree when adversarial examples are perturbed by
@@ -99,7 +100,7 @@ generalization.
 
 \newpage
 
-\section{Method-Specific Approach}
+\section{Threshold-based Detection: A Method-Specific Approach}
 \label{sec:method_specific_approach}
 \begin{figure}[htp]
     \subfloat[$score_1$ ImageNet]{%
@@ -135,7 +136,7 @@ $score_1$ can effectively identify adversarial examples from diverse methods and
 even at different perturbation sizes, showing an overall AUC of 98.65\% on
 ImageNet and 99.09\% on Dogs vs. Cats.
 
-\section{Method-Agnostic Approach}
+\section{Adapting to Production: Method-Agnostic Approach}
 This method-specific approach described previously is suitable for displaying
 each classifier's best available result. Unfortunately, it is not a realistic
 scenario in a production environment as we would not be aware of the exact
@@ -150,7 +151,7 @@ essential to select a suitable threshold as the detection effectiveness depends
 ultimately on it; if the threshold is too high, the number of false positives
 will be high and vice versa for false negatives.
 
-\subsection{Selection Of The Noise Intensity}
+\subsection{Threshold and Noise Intensity Selection}
 \label{sec:selection_of_the_intensity}
 
 Because of the relation between adversarial and random perturbation discussed in
@@ -201,7 +202,7 @@ zero to twenty times as positive.
 
 \newpage
 
-\section{Detection Results}
+\section{Detection Results and Performance Analysis}
 \label{sec:detection_results}
 
 Following the same procedure as in section \ref{sec:selection_of_the_intensity},
@@ -234,13 +235,15 @@ demonstrates a 100.0\% detection rate using the combined scores (Table
 method is that it can detect both low-perturbation and large-perturbation
 adversarial examples.
 
-This adaptability comes from the inputs being transformed with varying random
-perturbation intensities, which allows for the detection of samples generated
-with CW (at lower $\kappa$ values) and detect BIM or similar methods (at
-higher $\kappa$ values)—as for the samples generated with the CW method,
-increasing the number of iterations from 100 (Table \ref{tab:detection_results},
-ImageNet, No. 7) to 10000 (Table \ref{tab:detection_results}, ImageNet, No. 8)
-does not reduce the detection performances.
+This adaptability of our approach comes from the inputs being transformed with
+varying random perturbation intensities, which allows for the detection of
+samples generated with CW (at lower $\kappa$ values) and the detection of BIM or
+similar methods (at higher $\kappa$ values). As seen in Table
+\ref{tab:detection_results}, even when increasing the number of iterations from
+100 (ImageNet, No. 7) to 10000 (ImageNet, No. 8) for samples generated with the
+CW method, the detection performance remains unchanged. This is expected as
+increasing the number of iterations does not make the perturbation more robust;
+it only makes it less noticeable to the human eye.
 
 \begin{table}[tph]
     \centering
@@ -701,7 +704,7 @@ does not reduce the detection performances.
 \end{table}
 
 \pagebreak
-\subsection{Showcasing With One Sample}
+\subsection{A Real-World Example: Showcasing the Method on a Sample}
 To visualize a concrete example, I randomly select one image from the ImageNet
 validation set where I perform the previously described method. I then generate
 an adversarial example using BIM. Figure \ref{fig:showcase_example_samples}
@@ -709,7 +712,7 @@ shows the base image (A), the adversarial perturbation (B) magnified by ten, and
 the final result adversarial example (C) that is identified as a "running shoe"
 by the model.
 
-\begin{figure}[t]
+\begin{figure}[htp]
     \subfloat[]{%
         \includegraphics[clip,width=.33\linewidth]{Figures/showcase_example/normal.png}%
     } \subfloat[]{%
