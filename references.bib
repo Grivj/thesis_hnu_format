@@ -268,15 +268,14 @@
 }
 
 @article{metzen_detecting_2017,
-  title    = {On {Detecting} {Adversarial} {Perturbations}},
-  url      = {http://arxiv.org/abs/1702.04267},
-  abstract = {Machine learning and deep learning in particular has advanced tremendously on perceptual tasks in recent years. However, it remains vulnerable against adversarial perturbations of the input that have been crafted specifically to fool the system while being quasi-imperceptible to a human. In this work, we propose to augment deep neural networks with a small "detector" subnetwork which is trained on the binary classification task of distinguishing genuine data from data containing adversarial perturbations. Our method is orthogonal to prior work on addressing adversarial perturbations, which has mostly focused on making the classification network itself more robust. We show empirically that adversarial perturbations can be detected surprisingly well even though they are quasi-imperceptible to humans. Moreover, while the detectors have been trained to detect only a specific adversary, they generalize to similar and weaker adversaries. In addition, we propose an adversarial attack that fools both the classifier and the detector and a novel training procedure for the detector that counteracts this attack.},
-  journal  = {arXiv:1702.04267 [cs, stat]},
-  author   = {Metzen, Jan Hendrik and Genewein, Tim and Fischer, Volker and Bischoff, Bastian},
-  month    = feb,
-  year     = {2017},
-  keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Machine Learning, Statistics - Machine Learning, Computer Science - Artificial Intelligence},
-  annote   = {arXiv: 1702.04267}
+  doi = {10.48550/ARXIV.1702.04267},
+  url = {https://arxiv.org/abs/1702.04267},
+  author = {Metzen, Jan Hendrik and Genewein, Tim and Fischer, Volker and Bischoff, Bastian},
+  keywords = {Machine Learning (stat.ML), Artificial Intelligence (cs.AI), Computer Vision and Pattern Recognition (cs.CV), Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {On Detecting Adversarial Perturbations},
+  publisher = {arXiv},
+  year = {2017},
+  copyright = {arXiv.org perpetual, non-exclusive license}
 }
 
 @article{bhagoji_dimensionality_2017,
@@ -627,4 +626,18 @@
   year      = {2016},
   pages     = {4480--4488},
   file      = {Zheng et al. - 2016 - Improving the Robustness of Deep Neural Networks v.pdf:/Users/jordan/Zotero/storage/4CGHL4UX/Zheng et al. - 2016 - Improving the Robustness of Deep Neural Networks v.pdf:application/pdf}
+}
+
+@article{connor_survey_augmentation_2019,
+  title     = {A survey on Image Data Augmentation for {Deep} {Learning}},
+  issn      = {2196-1115},
+  url       = {https://doi.org/10.1186/s40537-019-0197-0},
+  doi       = {10.1186/s40537-019-0197-0},
+  abstract  = {Deep convolutional neural networks have performed remarkably well on many Computer Vision tasks. However, these networks are heavily reliant on big data to avoid overfitting. Overfitting refers to the phenomenon when a network learns a function with very high variance such as to perfectly model the training data. Unfortunately, many application domains do not have access to big data, such as medical image analysis. This survey focuses on Data Augmentation, a data-space solution to the problem of limited data. Data Augmentation encompasses a suite of techniques that enhance the size and quality of training datasets such that better Deep Learning models can be built using them. The image augmentation algorithms discussed in this survey include geometric transformations, color space augmentations, kernel filters, mixing images, random erasing, feature space augmentation, adversarial training, generative adversarial networks, neural style transfer, and meta-learning. The application of augmentation methods based on GANs are heavily covered in this survey. In addition to augmentation techniques, this paper will briefly discuss other characteristics of Data Augmentation such as test-time augmentation, resolution impact, final dataset size, and curriculum learning. This survey will present existing methods for Data Augmentation, promising developments, and meta-level decisions for implementing Data Augmentation. Readers will understand how Data Augmentation can improve the performance of their models and expand limited datasets to take advantage of the capabilities of big data.},
+  language  = {en},
+  publisher = {Journal of Big Data},
+  author    = {Shorten, Connor and Khoshgoftaar, Taghi M.},
+  month     = jun,
+  year      = {2019},
+  pages     = {60},
 }
