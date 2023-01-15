@@ -2,7 +2,7 @@
 \label{Experiments}
 \overridetextsize
 
-\section{Overview}
+\section{Intuition behind Gaussian Noise in Adversarial Examples}
 \label{sec:experiments_overview}
 
 
@@ -162,7 +162,7 @@ I generate adversarial examples using accurately classified images from the test
 sets of each dataset as it would not make sense generating adversarial examples
 on samples that the models already fail to identify.
 
-\section{Robustness}
+\section{Assessing Robustness}
 \label{sec:robustness}
 
 In this section, in order to verify the intuition mentioned in section
@@ -171,7 +171,7 @@ to both the input images and the adversarial examples in order to compare the
 model's output before and after the added noise.
 
 
-\subsection{Consistency}
+\subsection{Measuring Consistency: A Metric for Assessing Robustness}
 \label{sub:consistency}
 
 \begin{figure}[htp]
@@ -252,7 +252,7 @@ undeniably show that the more substantial the adversarial perturbation is
 perturbations. Therefore, a larger $\kappa$ may be needed to counter the
 effectiveness of the higher adversarial perturbation budget attacks.
 
-\subsection{Logits differences}
+\subsection{Analyzing the Effect of Random Perturbations on Output Logits}
 \label{sub:logits_differences}
 \begin{figure}[ht]
     \centering
