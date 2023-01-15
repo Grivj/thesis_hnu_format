@@ -24,14 +24,9 @@ $\kappa$ to increase the amount of random noise added to the image. However,
 increasing $\kappa$ too much can lead to the deterioration of normal images,
 increasing false positives. Therefore, it is important to find the right balance
 between increasing $\kappa$ to improve the detection of adversarial examples and
-not causing too much deterioration of normal images. Future research may also
-explore other techniques, such as data augmentation, to improve the robustness
-of the model to adversarial examples and enhance the detection performances on
-lower-resolution images like CIFAR-10. For example, adding noise to the training
-data can be used to reduce overfitting or stabilize the models. Combined with
-the proposed method, it could improve the model's robustness to noise and reduce
-the number of false positives.
+not causing too much deterioration of normal images.
 
+\clearpage
 \section{Adapting to Adaptive Adversaries}
 
 In the experiments presented, I assumed that the adversaries had full knowledge
@@ -59,7 +54,6 @@ the detection. The proposed method's randomness, unpredictability, and ability
 to be easily combined with other existing defense methods make it a powerful
 tool for detecting adversarial examples.
 
-
 \clearpage
 \section{Potential Improvements and Next Steps}
 
@@ -77,18 +71,19 @@ where $\alpha_i$ represents the score result (either $score_1$ or $score_2$ seen
 in \ref{eq:score1} and \ref{eq:score2}) at $\kappa_i$ noise intensity.
 
 \begin{figure}[htp]
+    \centering
     \subfloat[]{%
-        \includegraphics[clip,width=.5\linewidth]{Figures/peaks/1.png}%
+        \includegraphics[clip,width=.45\linewidth]{Figures/peaks/1.png}%
     }
     \subfloat[]{%
-        \includegraphics[clip,width=.5\linewidth]{Figures/peaks/3.png}%
+        \includegraphics[clip,width=.45\linewidth]{Figures/peaks/3.png}%
     }
 
     \subfloat[]{%
-        \includegraphics[clip,width=.5\linewidth]{Figures/peaks/13.png}%
+        \includegraphics[clip,width=.45\linewidth]{Figures/peaks/13.png}%
     }
     \subfloat[]{%
-        \includegraphics[clip,width=.5\linewidth]{Figures/peaks/20.png}%
+        \includegraphics[clip,width=.45\linewidth]{Figures/peaks/20.png}%
     }
 
     \caption{Peaks observed on normal and adversarial images. Peaks on
