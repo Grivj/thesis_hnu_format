@@ -4,19 +4,33 @@
 
 \section{Low Resolution Images}
 
-As shown in table \ref{tab:detection_results}, the detection performances on
-CIFAR-10 are inferior compared to ImageNet or Dogs vs. Cats. I suppose that the
-cause of this inferior result is that the perturbation needed to produce
-adversarial examples on lower-resolution images (\emph{e.g.,} the ones from
-CIFAR-10) is proportionally larger than on images with higher resolution.
-Furthermore, as discussed in section \ref{sec:robustness}, more significant
-adversarial perturbations are more robust to the random noise we add to the
-images. Consequently, we need to use a larger $\kappa$ to improve the detection
-for adversarial examples that contain a more significant relative adversarial
-perturbation. However, while using a larger $\kappa$ proved to be helpful to
-detect larger-perturbation adversarial examples, a $\kappa$ too high can
-deteriorate normal images, leading the model not to recognize them, thus,
-increasing the number of false positives.
+One possible reason for the inferior detection performance on CIFAR-10 compared
+to higher resolution datasets like ImageNet or Dogs vs. Cats, as shown in table
+\ref{tab:detection_results}, is the relative size of the adversarial
+perturbations required to fool the model. Lower-resolution images, such as those
+in CIFAR-10, have fewer pixels and therefore require a more significant
+proportion of pixels to be changed to create an adversarial example. This more
+significant proportion of pixels changed can make the adversarial perturbations
+more noticeable to the human eye. However, it also makes the perturbations more
+robust to the random noise added to the image in the proposed method.
+Additionally, the lower resolution of CIFAR-10 images may also impact the
+ability of the model to classify the image accurately. This is because
+lower-resolution images contain less visual information and may have less detail
+than higher-resolution images. This lack of detail can make it harder for the
+model to identify the important features for classification, which can make the
+model more susceptible to adversarial examples. To improve the detection
+performance on CIFAR-10, it may be necessary to use a more considerable value of
+$\kappa$ to increase the amount of random noise added to the image. However,
+increasing $\kappa$ too much can lead to the deterioration of normal images,
+increasing false positives. Therefore, it is important to find the right balance
+between increasing $\kappa$ to improve the detection of adversarial examples and
+not causing too much deterioration of normal images. Future research may also
+explore other techniques, such as data augmentation, to improve the robustness
+of the model to adversarial examples and enhance the detection performances on
+lower-resolution images like CIFAR-10. For example, adding noise to the training
+data can be used to reduce overfitting or stabilize the models. Combined with
+the proposed method, it could improve the model's robustness to noise and reduce
+the number of false positives.
 
 \section{Adaptive Adversaries}
 
