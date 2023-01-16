@@ -51,7 +51,7 @@ following sections.
 \end{algorithm}
 
 In this algorithm, $x$ is the input image, $threshold_1$ and $threshold_2$ are
-the threshold values for the two scores. $f_1$ and $f_2$ are the two functions
+the thresholds values for the two scores. $f_1$ and $f_2$ are the two functions
 that compute the scores, and $\mathcal{N}(0, \kappa)$ is Gaussian noise with
 mean 0 and standard deviation $\kappa$. The algorithm starts by adding Gaussian
 noise with mean 0 and standard deviation $\kappa$ to the input image and
@@ -59,9 +59,9 @@ computes the two scores using $f_1$ and $f_2$. Then, it checks if either of the
 two scores is greater than the corresponding threshold value. If either of the
 scores is greater than the threshold, the algorithm returns "$True$," indicating
 that the input image is an adversarial example. Otherwise, the algorithm
-continues on and does the same for each remaining $\kappa$ and returns "$False$"
+continues and does the same for each remaining $\kappa$ and returns "$False$"
 if none of the scores went above their respective thresholds, indicating that
-the input image is a normal image.
+the input image is image.
 
 
 
