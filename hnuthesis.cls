@@ -784,26 +784,26 @@
 }
 \renewcommand\proofname\hnu@proofname
 
-% 算法和代码：
-% 算法环境
-\RequirePackage[algoruled, algochapter, lined, linesnumbered]{algorithm2e}
-\renewcommand{\algorithmcfname}{算法}
-\RequirePackage{listings}
-\lstset{
-  basicstyle=\small\ttfamily,
-  xleftmargin=2pc,
-  xrightmargin=2pc,
-  frame=single,
-  columns=flexible,
-  numbers=left,
-}
-\newcommand{\rememberlines}{\xdef\rememberedlines{\number\value{AlgoLine}}}
-\newcommand{\resumenumbering}{\setcounter{AlgoLine}{\rememberedlines}}
+% % 算法和代码：
+% % 算法环境
+% \RequirePackage[algoruled, algochapter, lined, linesnumbered]{algorithm2e}
+% \renewcommand{\algorithmcfname}{算法}
+% \RequirePackage{listings}
+% \lstset{
+%   basicstyle=\small\ttfamily,
+%   xleftmargin=2pc,
+%   xrightmargin=2pc,
+%   frame=single,
+%   columns=flexible,
+%   numbers=left,
+% }
+% \newcommand{\rememberlines}{\xdef\rememberedlines{\number\value{AlgoLine}}}
+% \newcommand{\resumenumbering}{\setcounter{AlgoLine}{\rememberedlines}}
 
-\RequirePackage[skins]{tcolorbox}
-\newtcolorbox{talgorithm}[2][]{%
-  blanker,float=tbp,grow to left by=#2,grow to right by=#2,
-  before upper={\begin{algorithm}[H]},
-        after upper={\end{algorithm}},
-  #1
-}
+% \RequirePackage[skins]{tcolorbox}
+% \newtcolorbox{talgorithm}[2][]{%
+%   blanker,float=tbp,grow to left by=#2,grow to right by=#2,
+%   before upper={\begin{algorithm}[H]},
+%         after upper={\end{algorithm}},
+%   #1
+% }

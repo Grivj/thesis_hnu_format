@@ -81,6 +81,11 @@ Minsky M, Papert S~A.
 \newblock Perceptrons: {An} {Introduction} to {Computational} {Geometry}.
 \newblock 1969.
 
+\bibitem{haykin_neural_1994}
+Haykin S.
+\newblock Neural networks: a comprehensive foundation.
+\newblock Prentice-Hall, 1994
+
 \bibitem{rumelhart_learning_1986}
 Rumelhart D~E, Hinton G~E, Williams R~J.
 \newblock Learning representations by back-propagating errors.
@@ -196,5 +201,28 @@ Zheng S, Song Y, Leung T, et~al.
 \newblock Improving the {Robustness} of {Deep} {Neural} {Networks} via
   {Stability} {Training}.
 \newblock 2016. 4480--4488
+
+\bibitem{connor_survey_augmentation_2019}
+Shorten C, Khoshgoftaar T~M.
+\newblock A survey on Image Data Augmentation for {Deep} {Learning}.
+\newblock 2019.~60
+
+\bibitem{metzen_detecting_2017}
+Metzen J~H, Genewein T, Fischer V, et~al.
+\newblock On Detecting Adversarial Perturbations.
+\newblock 2017.
+
+\bibitem{liang_detecting_2021}
+Liang B, Li H, Su M, et~al.
+\newblock Detecting {Adversarial} {Image} {Examples} in {Deep} {Networks} with
+  {Adaptive} {Noise} {Reduction}.
+\newblock IEEE Transactions on Dependable and Secure Computing, 2021,
+  18(1):72--85
+
+\bibitem{bhagoji_dimensionality_2017}
+Bhagoji A, Cullina D, Mittal P.
+\newblock Dimensionality {Reduction} as a {Defense} against {Evasion} {Attacks}
+  on {Machine} {Learning} {Classifiers}.
+\newblock 2017.
 
 \end{thebibliography}
