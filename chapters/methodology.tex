@@ -23,6 +23,48 @@ adversarial or not.
     \label{fig:framework}
 \end{figure}
 
+\subsection{Implementation of the NAED Method}
+\label{sub:implementation}
+The following algorithm describes the implementation of the Noise-Aided
+Adversarial Example Detection (NAED) method proposed in this thesis. The specific
+threshold values and the method for computing the scores are discussed in the
+following sections.
+
+\begin{algorithm}
+    \begin{algorithmic}[1]
+        \label{alg:detection}
+        \caption{Detection Algorithm}
+        \Procedure{Detection}{$x, threshold_1, threshold_2$}
+        \State $scores \gets \{\}$
+        \For{$\kappa \in {1, 2, ..., K}$}
+        \State $x_{\kappa} \gets x + \mathcal{N}(0, \kappa)$
+        \State $score_1 \gets f_1(x_{\kappa})$
+        \State $score_2 \gets f_2(x_{\kappa})$
+        \State $scores_{\kappa} \gets (score_1, score_2)$
+        \If {$score_1 > threshold_1$ or $score_2 > threshold_2$}
+        \State \Return{True}
+        \EndIf
+        \EndFor
+        \State \Return{False}
+        \EndProcedure
+    \end{algorithmic}
+\end{algorithm}
+
+In this algorithm, $x$ is the input image, $threshold_1$ and $threshold_2$ are
+the threshold values for the two scores. $f_1$ and $f_2$ are the two functions
+that compute the scores, and $\mathcal{N}(0, \kappa)$ is Gaussian noise with
+mean 0 and standard deviation $\kappa$. The algorithm starts by adding Gaussian
+noise with mean 0 and standard deviation $\kappa$ to the input image and
+computes the two scores using $f_1$ and $f_2$. Then, it checks if either of the
+two scores is greater than the corresponding threshold value. If either of the
+scores is greater than the threshold, the algorithm returns "$True$," indicating
+that the input image is an adversarial example. Otherwise, the algorithm
+continues on and does the same for each remaining $\kappa$ and returns "$False$"
+if none of the scores went above their respective thresholds, indicating that
+the input image is a normal image.
+
+
+
 \section{Predictions Differences: Two scores}
 \label{sub:detection_metrics}
 As observed in section \ref{sub:logits_differences}, the model predictions
