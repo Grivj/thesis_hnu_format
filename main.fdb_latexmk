@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex main"] 1679481506 "main.aux" "main.bbl" "main" 1679482816
+["bibtex main"] 1679481506 "main.aux" "main.bbl" "main" 1679483019
   "./hnunumerical.bst" 1637223811 24358 29e6b65271d80d91331acb0b47f46c60 ""
-  "main.aux" 1679482811 35518 b82beff2844264f989c1bdf095946eab "xelatex"
+  "main.aux" 1679483014 35518 b82beff2844264f989c1bdf095946eab "xelatex"
   "references.bib" 1673805898 70523 ef08600a5b0cbae7fa260d056f312d0d ""
   (generated)
   "main.blg"
   "main.bbl"
-["xdvipdfmx"] 1679482812 "main.xdv" "main.pdf" "main" 1679482816
-  "main.xdv" 1679482811 1019896 f1a18242879913c5e8425c0ffb53d958 "xelatex"
+["xdvipdfmx"] 1679483015 "main.xdv" "main.pdf" "main" 1679483019
+  "main.xdv" 1679483014 1019876 00aae18b694445eba05763ce38c5897d "xelatex"
   (generated)
   "main.pdf"
-["xelatex"] 1679482809 "/Users/jordan/Dev/thesis_hnu_format/main.tex" "main.xdv" "main" 1679482816
+["xelatex"] 1679483012 "/Users/jordan/Dev/thesis_hnu_format/main.tex" "main.xdv" "main" 1679483019
   "/System/Library/Fonts/Menlo.ttc" 1673657862 2156036 ec05dfca6821d85440da0899493002c3 ""
   "/System/Library/Fonts/PingFang.ttc" 1673657862 77157916 fd717c79561557f159c9f289f92fb545 ""
   "/Users/jordan/Dev/thesis_hnu_format/main.tex" 1677588236 1971 5148dd71bfed27a3e82cd775188dd362 ""
@@ -286,7 +286,7 @@
   "Figures/showcase_example/normal.png" 1657794779 120201 55eb4ff66803827971e49a9840994a47 ""
   "Figures/showcase_example/score_1_threshold.png" 1657794779 75398 88ce8ec3a4a1f5e228b95748c0897e9c ""
   "Figures/showcase_example/score_2_threshold.png" 1657794779 78802 3c62c187346c8cd0095b42dd3ebe583e ""
-  "chapters/abstract.tex" 1679482809 11144 735ddb841603a1c9af7551dae34fbc76 ""
+  "chapters/abstract.tex" 1679483010 11151 d038a121c058f49225fc01ab0118ec3c ""
   "chapters/acknowledgements.tex" 1657796627 2059 1026f7a10331ec53f820796ec99d59f9 ""
   "chapters/discussion.tex" 1673804017 6968 06df63daf78bcf32f19a8be0f271ce28 ""
   "chapters/experiments.tex" 1676831288 13699 eadf1175eaf4b39834584336681c2fa7 ""
@@ -303,18 +303,18 @@
   "figures/intro/ae_diff.png" 1657794779 172193 2398e844a9ecb337f78e33fdbce5ee4b ""
   "figures/intro/normal.png" 1657794779 97124 99f83e1e6efce3cf6a3a093bb5e1dbb3 ""
   "hnuthesis.cls" 1673907930 26398 03bcb9c2a41847a6197c69693ca68fcd ""
-  "main.aux" 1679482811 35518 b82beff2844264f989c1bdf095946eab "xelatex"
+  "main.aux" 1679483014 35518 b82beff2844264f989c1bdf095946eab "xelatex"
   "main.bbl" 1679481507 8018 5ba5edebce20a250d3dfccaaf13b9aec "bibtex main"
-  "main.lof" 1679482811 9711 f954b689b6c1c45d8fbf365055c617dd "xelatex"
-  "main.lot" 1679482811 799 9df05fcd966643fb1c35e82789317a0a "xelatex"
-  "main.out" 1679482811 10385 7843a1bf1c9264f5d764fa35937b38ae "xelatex"
+  "main.lof" 1679483014 9711 f954b689b6c1c45d8fbf365055c617dd "xelatex"
+  "main.lot" 1679483014 799 9df05fcd966643fb1c35e82789317a0a "xelatex"
+  "main.out" 1679483014 10385 7843a1bf1c9264f5d764fa35937b38ae "xelatex"
   "main.tex" 1677588236 1971 5148dd71bfed27a3e82cd775188dd362 ""
-  "main.toc" 1679482811 4366 6ef7c78f36e394ec617f2ade8157c647 "xelatex"
+  "main.toc" 1679483014 4366 6ef7c78f36e394ec617f2ade8157c647 "xelatex"
   (generated)
-  "main.lot"
+  "main.toc"
+  "main.aux"
   "main.xdv"
-  "main.out"
+  "main.lot"
   "main.lof"
   "main.log"
-  "main.aux"
-  "main.toc"
+  "main.out"
