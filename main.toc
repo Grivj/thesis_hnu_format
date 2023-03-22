@@ -1,8 +1,8 @@
 \contentsline {chapter}{学位论文原创性声明和学位论文版权使用授权书}{I}{Doc-Start}%
 \contentsline {chapter}{摘\hskip 1em\relax 要}{II}{chapter*.1}%
-\contentsline {chapter}{Abstract}{IV}{chapter*.2}%
-\contentsline {chapter}{插图索引}{VII}{chapter*.4}%
-\contentsline {chapter}{附表索引}{X}{chapter*.5}%
+\contentsline {chapter}{Abstract}{V}{chapter*.2}%
+\contentsline {chapter}{插图索引}{VIII}{chapter*.4}%
+\contentsline {chapter}{附表索引}{XI}{chapter*.5}%
 \contentsline {chapter}{\numberline {第1章\hspace {.3em}}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Main Contribution}{4}{section.1.2}%
