@@ -2,6 +2,11 @@
 
 This thesis explores the robustness of deep neural networks (DNNs) when subjected to adversarial examples—carefully crafted inputs designed to deceive models into incorrect predictions. With the growing deployment of DNNs in applications ranging from self-driving cars to image and speech recognition, understanding and mitigating these vulnerabilities has become crucial.
 
+## Viewing the Full Thesis
+
+For a detailed analysis and further results, [click here to view the full thesis PDF](main.pdf).
+
+
 ## Motivation
 
 Deep neural networks have excelled in various tasks, including:
