@@ -1,86 +1,36 @@
-# 湖南大学硕士学位论文 LaTeX 模板
+# 噪声辅助对抗性例子检测：一种简单有效的识别恶意输入的方法: Noise-Aided Adversarial Example Detection: A Simple and Effective Method for Identifying Malicious Inputs
 
-[![Compile and publish the release](https://github.com/yusanshi/hnuthesis/actions/workflows/main.yml/badge.svg)](https://github.com/yusanshi/hnuthesis/actions/workflows/main.yml) [![GitHub Releases](https://img.shields.io/github/v/release/yusanshi/hnuthesis)](https://github.com/yusanshi/hnuthesis/releases/latest)
+This thesis explores the robustness of deep neural networks (DNNs) when subjected to adversarial examples—carefully crafted inputs designed to deceive models into incorrect predictions. With the growing deployment of DNNs in applications ranging from self-driving cars to image and speech recognition, understanding and mitigating these vulnerabilities has become crucial.
 
-本项目是湖南大学硕士学位论文 LaTeX 模板 hnuthesis，按照《[湖南大学研究生学位论文撰写规范](http://gra.hnu.edu.cn/info/1276/3444.htm)》的要求编写（**个人能力、精力有限，不保证完全符合规范，_Use at your own risk!_**）。
+## Motivation
 
-下载地址：[GitHub Releases](https://github.com/yusanshi/hnuthesis/releases)、[Overleaf](https://www.overleaf.com/latex/templates/hu-nan-da-xue-shuo-shi-xue-wei-lun-wen-latex-mo-ban-hnuthesis/dbjwjghhvmmd)。
+Deep neural networks have excelled in various tasks, including:
+- Image and speech recognition [Russakovsky et al., 2015; Amodei et al., 2015]
+- Autonomous driving [Bojarski et al., 2016]
+- Playing complex games like Go [Silver et al., 2016]
 
-本项目基于 [Gwinel/Latex](https://github.com/Gwinel/Latex/)。
+However, DNNs are vulnerable to adversarial examples—small, often imperceptible perturbations in input data that lead to misclassifications. Below is an example:
+![misclassifications example](https://github.com/user-attachments/assets/b2e62cec-6b73-4686-ab8c-773cd428fc8f)
 
-关于 LaTeX 的安装、配置、编写的相关问题，请参阅其他类似项目（如 [thuthesis](https://github.com/tuna/thuthesis) 和 [ustcthesis](https://github.com/ustctug/ustcthesis) 等）。
+Additionally, the difference in robustness between random noise and adversarial noise motivated me to explore the stability of adversarial examples under added random perturbations.
 
-## 关键文件说明
+## Main Contribution
 
-- `main.tex`: 主文件，编译入口；
-- `hnuthesis.cls`: 撰写规范，需要调整格式在该文件中对应修改；
-- `references.bib`: 参考文献列表；
-- `chapters/`: 论文章节文件夹，分章有利于保持 TeX 文件的整洁；
-- `figures/`: 插图文件夹，LaTeX 支持多种格式，如 EPS、PDF、PNG 等；
-- `main.pdf`: 编译生成的论文 PDF 文件；
-- `main-for-word.pdf`: 编译生成的适用于转 Word 的论文 PDF 文件（栅格化公式，防止转 Word 后*不忍直视*）。
+In this thesis, I propose a novel method to detect adversarial examples by introducing Gaussian noise of varying intensity to the inputs and evaluating the model's prediction consistency. This method:
+- Does not require prior knowledge about the type of adversarial attack.
+- Is computationally efficient, requiring no parameter training or optimization.
+- Can be combined with other detection techniques for enhanced efficacy.
 
-## 编译
+This approach emerged after analyzing the effects of Gaussian noise on both normal and adversarial images, revealing significant disparities not discussed in prior work.
 
-### 1. 个人设备
+本研究的主要贡献在于提供了一种简单、高效且可扩展的对抗样本检测方法，以应对深
+度学习模型在实际应用中所面临的安全挑战。通过实验证明了该方法的有效性，并与现
+有方法进行了比较分析，为后续研究提供了宝贵的参考。
 
-1. 安装 LaTeX 发行版；
+在本研究中，我们成功地提出了一种简单、高效且可扩展的对抗样本检测方法。然而，
+我们认识到这项研究仍有一些局限性和未来的改进方向。
 
-2. 对于非 Windows 系统，需要额外安装字体，以 Debian/Ubuntu 为例：
-
-   ```bash
-   sudo apt-get update
-
-   # 自动同意 Microsoft EULA 并安装 ttf-mscorefonts-installer
-   echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
-   sudo apt-get install -y ttf-mscorefonts-installer
-
-   # 手动下载安装 SimSun（中易宋体）、SimHei（中易黑体）字体
-   mkdir simfonts && wget -qO- https://github.com/yusanshi/hnuthesis/files/6371620/SimFonts.tar.gz | tar xz -C simfonts
-   mkdir -p ~/.local/share/fonts && mv simfonts ~/.local/share/fonts
-   fc-cache -f
-   ```
-
-3. 编译主版本：
-
-   ```bash
-   latexmk -xelatex -shell-escape main.tex
-   ```
-
-   或者在 vscode 下安装 [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) 插件后 _complie on save_（[插件的配置示例](https://github.com/yusanshi/hnuthesis/issues/2#issuecomment-972627364)）。
-
-4. 编译主版本和转 Word 版：
-
-   ```bash
-   ./run.sh
-   ```
-
-   > 注意：脚本的运行需要 Unix style 的命令行环境，对于 Windows 用户，可以使用安装完 Git 客户端之后的 Git Bash。
-
-### 2. Overleaf
-
-<https://www.overleaf.com/latex/templates/hu-nan-da-xue-shuo-shi-xue-wei-lun-wen-latex-mo-ban-hnuthesis/dbjwjghhvmmd>
-
-### 3. GitHub Actions
-
-1. 通过 `Use this template` 或 Fork 创建项目；
-
-2. 通过 push tag 触发 compile & publish 过程，如：
-
-   ```
-   git tag v0.x.x
-   git push --tags
-   ```
-
-   待 GitHub Actions 结束后在 releases 中下载新编译的 `main.pdf` 和 `main-for-word.pdf` 文件。
-
-   ![image](https://user-images.githubusercontent.com/36265606/116044616-b6b30e00-a6a3-11eb-82ff-e8bba576da16.png)
-
-## 转 Word 文件
-
-使用 <https://www.adobe.com/acrobat/online/pdf-to-word.html> 转换 `main-for-word.pdf` 文件。第二次转换文件时需要登录 Adobe 账号才能下载，建议在浏览器的“无痕浏览”“隐私模式”等模式下访问以跳过强制登录。
-
-## TODO
-
-- 重新整理 `hnuthesis.cls` 和 `hnunumerical.bst`，支持博士学位；
-- [issue] 转 Word 时，文献引用符号后面的文字变小。
+- 深入分析不同类型的对抗性攻击：虽然本研究涉及了一些常见的对抗性攻击方法，但未来的研究可以考虑探索更多的攻击策略，以便更全面地评估所提方法的鲁棒性。
+- 扩展到其他任务和领域：本研究主要关注图像分类任务，但对抗性攻击同样存在于其他计算机视觉任务，如目标检测、语义分割等。未来的研究可以将所提方法应用于这些任务，以验证其在不同场景下的有效性。
+- 研究更多的防御策略：除了本文提出的对抗样本检测方法外，还可以研究其他防御策略，如对抗性训练、模型蒸馏和特征空间变换等。这将有助于构建一个更强大、更全面的防御体系，进一步提高模型的鲁棒性。
+- 模型可解释性与安全性：为了增强对抗性攻击的防御能力，可以研究提高模型的可解释性，从而更好地理解其在面对对抗性样本时的行为。通过提高模型的可解释性，我们可以揭示模型的薄弱环节，进而设计出更强大的防御策略。
